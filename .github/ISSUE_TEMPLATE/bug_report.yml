@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible CacheNorth problem
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste session tokens, private documents, personal conversations, or sensitive log data."
+  - type: input
+    id: version
+    attributes:
+      label: CacheNorth version
+      placeholder: "e.g. personal-test v1.0.x"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windows version and hardware
+      placeholder: "Windows build; CPU; RAM; GPU"
+    validations:
+      required: true
+  - type: dropdown
+    id: acceleration
+    attributes:
+      label: AI acceleration mode
+      options: [CPU, Automatic GPU, Manual GPU, Not applicable]
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open... 2. Select... 3. Observe..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Actual behavior and redacted evidence
+    validations:
+      required: true
