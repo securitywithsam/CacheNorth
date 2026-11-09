@@ -1,13 +1,25 @@
 <p align="center"><img src="dashboard/cache-north-logo.png" alt="CacheNorth logo" width="120"></p>
 
-# CacheNorth by Security With Sam
+# CacheNorth
 
-**Your knowledge. Anywhere.**
+**Your knowledge. Anywhere.** · By [Security With Sam](https://github.com/securitywithsam)
+
+> **Source preview:** v1.0.3 is still undergoing release checks. There is no official downloadable Windows package or preassembled USB image yet. Start with [Getting Started](docs/GETTING_STARTED.md).
 
 CacheNorth is a portable, offline-first Windows application that runs a private AI assistant on your own computer, answers questions from your own documents with source citations, and opens offline reference libraries and maps. It runs from a USB drive or any folder, needs no account or cloud service, and keeps your conversations on your drive.
 
 > **Status:** v1.0.3. Developed and tested on Windows 11. See [Tested hardware](#tested-hardware) before relying on it elsewhere.
 > **License:** not yet chosen. Until a license is published, all rights are reserved by Security With Sam. See [docs/LICENSE_RECOMMENDATION.md](docs/LICENSE_RECOMMENDATION.md).
+
+## Choose your path
+
+| Goal | Guide |
+|---|---|
+| **Get started as a beginner** | [Getting Started](docs/GETTING_STARTED.md) |
+| **Build the Windows app** | [Build from Source](docs/BUILDING.md) |
+| **Set up a USB and AI model** | [Installation](docs/INSTALLATION.md) |
+| **Find models, Wikipedia, maps and guides** | [Content Sources](docs/CONTENT_SOURCES.md) |
+| **Change settings or troubleshoot** | [Configuration](docs/CONFIGURATION.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) |
 
 ## What it does
 
@@ -33,6 +45,8 @@ CacheNorth is a portable, offline-first Windows application that runs a private 
 
 ## Quick start (users)
 
+**There is no ready-to-run release yet.** The currently available project is source code; building requires a Windows development computer. See [Getting Started](docs/GETTING_STARTED.md) first.
+
 1. Build CacheNorth (below) or obtain a build from Security With Sam.
 2. Copy the build folder to a USB drive or any folder.
 3. Add at least one GGUF model to `Apps\Offline AI\Models` ([docs/INSTALLATION.md](docs/INSTALLATION.md#3-add-an-ai-model)).
@@ -57,6 +71,8 @@ Details, prerequisites, and options: **[docs/BUILDING.md](docs/BUILDING.md)**.
 
 | Document | Contents |
 |---|---|
+| [GETTING_STARTED.md](docs/GETTING_STARTED.md) | Choose the correct setup path and see what is included |
+| [CONTENT_SOURCES.md](docs/CONTENT_SOURCES.md) | Verified source links for AI models, Kiwix, maps and optional guides |
 | [INSTALLATION.md](docs/INSTALLATION.md) | Set up a portable drive, add models, documents, archives, maps, and guides |
 | [BUILDING.md](docs/BUILDING.md) | Build the Windows application from source; tests |
 | [CONFIGURATION.md](docs/CONFIGURATION.md) | Settings, GPU acceleration, context length, data locations, customization |
@@ -82,6 +98,10 @@ Windows 10, physical 8 GB and 16 GB machines, older AVX-only or non-AVX processo
 ## Reporting bugs
 
 Open an issue using the **Bug report** template. Include your Windows version, CPU, RAM, CacheNorth version, the exact error, and the last lines of `Apps\Offline AI\Data\Logs\koboldcpp.log`. Check logs for personal content before posting. Report security issues privately as described in [SECURITY.md](SECURITY.md).
+
+## Before sharing or distributing
+
+The source repository excludes model weights, ZIM archives, maps, third-party viewers and user data. Download these components separately, follow their individual licenses, and do not assume packaged distributions are cleared. [License details](docs/THIRD_PARTY_LICENSES.md).
 
 ## Branding
 
