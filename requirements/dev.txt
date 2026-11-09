@@ -1,0 +1,3 @@
+# Everything needed to test and build CacheNorth (used by scripts/bootstrap.ps1).
+-r build.txt
+-r test.txt

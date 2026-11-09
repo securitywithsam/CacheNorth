@@ -1,63 +1,88 @@
-# CacheNorth
+<p align="center"><img src="dashboard/cache-north-logo.png" alt="CacheNorth logo" width="120"></p>
+
+# CacheNorth by Security With Sam
 
 **Your knowledge. Anywhere.**
 
-CacheNorth is an offline-first, portable Windows toolkit by **Security With Sam**. It brings local AI chat, document search, offline reference libraries, maps, and practical guides together in one interface that can run from a USB drive.
+CacheNorth is a portable, offline-first Windows application that runs a private AI assistant on your own computer, answers questions from your own documents with source citations, and opens offline reference libraries and maps. It runs from a USB drive or any folder, needs no account or cloud service, and keeps your conversations on your drive.
 
-> **Release status:** Public source and downloads are being prepared. This repository documentation is a draft until the final compatibility, security, and third-party rights checks pass. There is no public installer or complete USB image available from this page yet.
+> **Status:** v1.0.3. Developed and tested on Windows 11. See [Tested hardware](#tested-hardware) before relying on it elsewhere.
+> **License:** not yet chosen. Until a license is published, all rights are reserved by Security With Sam. See [docs/LICENSE_RECOMMENDATION.md](docs/LICENSE_RECOMMENDATION.md).
 
-## What CacheNorth does
+## What it does
 
-- **Local AI chat:** Run compatible GGUF models through KoboldCpp without sending prompts to a hosted AI provider.
-- **Ask Documents:** Search locally indexed documents and retrieve source-backed answers with citations.
-- **Offline knowledge:** Discover compatible Kiwix ZIM archives stored on the drive.
-- **Offline maps:** Open map resources using a compatible map viewer.
-- **Guides:** Browse locally stored PDF help and reference material.
-- **Portable dashboard:** A Windows launcher and WebView2 interface with a browser fallback.
-- **Hardware-aware options:** CPU inference, optional Vulkan acceleration, model selection, and configurable context length where supported.
+- **Private AI chat** with local GGUF models (Qwen3 1.7B, Qwen3 4B, Qwen3.5 4B tested) through [KoboldCpp](https://github.com/LostRuins/koboldcpp). Nothing is sent to the internet.
+- **Ask Documents:** add PDF, TXT, or Markdown files and get answers with source cards showing the file, page, and passage used.
+- **Knowledge Library:** opens Kiwix `.zim` archives (Wikipedia, medical, repair, and more) in Kiwix JS.
+- **Offline Maps:** opens Mapsforge `.map` files in GPXSee.
+- **Guides:** lists PDF guides you copy to the drive.
+- **Hardware-aware:** CPU by default with AVX2/AVX/fallback detection. Optional Vulkan GPU acceleration (NVIDIA, AMD, Intel) is chosen per computer and falls back to CPU automatically.
+- **Configurable context length** (Automatic, 2K–32K tokens) with memory estimates for each option.
+- **Portable:** works from any drive letter or folder, including paths with spaces, and closes cleanly so the drive can be removed.
 
-CacheNorth is designed to work without an internet connection. Some separately bundled third-party programs or Windows components may use network services when online; those behaviors are being reviewed and documented before public release.
+## Requirements
 
-## Platform and requirements
+| | Minimum | Recommended |
+|---|---|---|
+| Windows | Windows 10 or 11, 64-bit (only Windows 11 has been tested) | Windows 11 64-bit |
+| Processor | 64-bit x86 CPU (AVX2 strongly recommended) | Recent 6+ core CPU with AVX2 |
+| Memory | 8 GB (Qwen3 1.7B, 2K context; untested on physical 8 GB machines) | 16 GB or more |
+| Storage | ~0.4 GB for the app + 1.3–2.8 GB per model | 32 GB+ USB 3 drive or SSD |
+| Graphics | Not required | Optional Vulkan-capable GPU |
+| Other | Microsoft Edge WebView2 Runtime (included with Windows 11) for the built-in window; otherwise your browser is used | |
 
-- **Primary target:** Windows 11, x64.
-- **Other environments:** Windows 10, older CPUs, lower-memory systems, and different GPUs require additional physical acceptance testing.
-- **Models and content:** Users will need to provide compatible models and knowledge resources from sources whose terms allow their intended use.
-- **Storage:** Depends heavily on the selected models, maps, and offline archives.
+## Quick start (users)
 
-## Project structure
+1. Build CacheNorth (below) or obtain a build from Security With Sam.
+2. Copy the build folder to a USB drive or any folder.
+3. Add at least one GGUF model to `Apps\Offline AI\Models` ([docs/INSTALLATION.md](docs/INSTALLATION.md#3-add-an-ai-model)).
+4. Double-click **`Launch CacheNorth.exe`**.
 
-The planned public source layout separates original application code from external content:
+Full instructions: **[docs/INSTALLATION.md](docs/INSTALLATION.md)**.
 
-| Folder | Purpose |
-| --- | --- |
-| `src/` | Python application and services |
-| `dashboard/` | Local web interface |
-| `launcher/` | Native Windows launcher |
-| `scripts/` | Build, verification, and maintenance scripts |
-| `tests/` | Automated regression tests |
-| `docs/` | Architecture, setup, troubleshooting, and compatibility notes |
-| `.github/` | Community templates and automation |
+## Build from source (developers)
 
-These folders will be populated from the final reviewed source tree. Large GGUF/ZIM/map files, personal data, and development builds should not be committed to Git history.
+```powershell
+git clone https://github.com/securitywithsam/CacheNorth.git
+cd CacheNorth
+powershell -ExecutionPolicy Bypass -File scripts\bootstrap.ps1          # Python environment (internet)
+powershell -ExecutionPolicy Bypass -File scripts\fetch_third_party.ps1  # KoboldCpp + WebView2, hash-verified (internet)
+powershell -ExecutionPolicy Bypass -File scripts\test.ps1               # automated tests
+powershell -ExecutionPolicy Bypass -File scripts\build.ps1              # creates dist\CacheNorth-1.0.3
+```
 
-## Build and setup
+Details, prerequisites, and options: **[docs/BUILDING.md](docs/BUILDING.md)**.
 
-Reproducible build instructions and verified dependency versions will be published after the final application candidate passes review. For now, please do not treat the development USB contents as an approved redistribution package.
+## Documentation
 
-## Privacy and safety
+| Document | Contents |
+|---|---|
+| [INSTALLATION.md](docs/INSTALLATION.md) | Set up a portable drive, add models, documents, archives, maps, and guides |
+| [BUILDING.md](docs/BUILDING.md) | Build the Windows application from source; tests |
+| [CONFIGURATION.md](docs/CONFIGURATION.md) | Settings, GPU acceleration, context length, data locations, customization |
+| [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) | Common problems and fixes |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the pieces fit together |
+| [THIRD_PARTY_LICENSES.md](docs/THIRD_PARTY_LICENSES.md) | Third-party components, licenses, and redistribution notes |
+| [RELEASE_NOTES.md](docs/RELEASE_NOTES.md) | Version history |
+| [SECURITY.md](SECURITY.md) | Security model and how to report vulnerabilities |
 
-- The local inference API is intended to bind to the local computer.
-- Conversations and imported documents stored on removable media may be readable by anyone who obtains that drive unless it is encrypted.
-- AI-generated information can be inaccurate. Verify important technical, medical, emergency, and safety information against trusted sources.
-- Respect Windows application-control decisions; CPU inference should remain available when optional GPU libraries are blocked.
+## What needs the internet
 
-## License and third-party components
+Only setup. Building needs PyPI, GitHub (KoboldCpp), and nuget.org (WebView2). Getting models, archives, maps, and viewers needs their download sites. **Running CacheNorth needs no internet.** Some third-party components may contact their own services when a connection exists (for example, the WebView2 runtime and Kiwix JS's update check). See [SECURITY.md](SECURITY.md).
 
-**The CacheNorth project's own license has not yet been selected.** Repository visibility alone does not grant reuse rights. Third-party applications and content have separate licenses and attribution requirements. See [`docs/SUPPLY_CHAIN_AND_LICENSE_REVIEW.md`](docs/SUPPLY_CHAIN_AND_LICENSE_REVIEW.md) before distributing any binary or data bundle.
+## Tested hardware
 
-## Contributing and support
+Physically tested on Windows 11 with:
 
-Community contribution guidance is in [`CONTRIBUTING.md`](CONTRIBUTING.md). Please use GitHub Issues for reproducible bugs and feature requests once the public repository opens. For security concerns, follow [`SECURITY.md`](SECURITY.md).
+- an AMD Ryzen 7 7800X3D desktop (32 GB, NVIDIA RTX 3080 and AMD integrated Vulkan);
+- an Intel Core laptop (Comet Lake class) with Intel UHD Graphics. Field logs cover v1.0.1–v1.0.2; owner testing of v1.0.3 on it is pending.
 
-Created by **Security With Sam**.
+Windows 10, physical 8 GB and 16 GB machines, older AVX-only or non-AVX processors, and managed corporate PCs have **not** been tested.
+
+## Reporting bugs
+
+Open an issue using the **Bug report** template. Include your Windows version, CPU, RAM, CacheNorth version, the exact error, and the last lines of `Apps\Offline AI\Data\Logs\koboldcpp.log`. Check logs for personal content before posting. Report security issues privately as described in [SECURITY.md](SECURITY.md).
+
+## Branding
+
+"CacheNorth", "Security With Sam", and their logos identify this project and are not covered by any open-source license that may be chosen for the code. Third-party names and trademarks belong to their owners.
