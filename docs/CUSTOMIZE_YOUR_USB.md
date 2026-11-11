@@ -36,8 +36,9 @@ E:\  CACHE NORTH USB
 ├── Guides\                                ← PDFs you want to browse
 │   └── your-guide.pdf
 ├── Kiwix\                                 ← Optional ZIM reader
+│   ├── Kiwix-JS-Electron-<version>-E.exe       ← Current portable EXE option
 │   └── kiwix-js-pwa-win32-ia32\
-│       └── Kiwix JS Electron.exe
+│       └── Kiwix JS Electron.exe              ← Legacy layout
 └── Start Here\                            ← Included help material (if present)
 ```
 
@@ -68,7 +69,7 @@ You need **at least one model** for offline AI chat. Download one `Q4_K_M` GGUF 
 A `.zim` is an offline library archive, used by [Kiwix](https://library.kiwix.org/). You can mix smaller, specialized collections with larger encyclopedias.
 
 - [Browse the Kiwix library](https://library.kiwix.org/) — search for **Simple English Wikipedia**, **Wiktionary**, **Wikivoyage**, and other topics.
-- [Kiwix JS portable Windows downloads](https://github.com/kiwix/kiwix-js-pwa/releases) — download the appropriate portable Windows archive if your USB does not already have the Kiwix viewer.
+- [Kiwix JS portable Windows downloads](https://github.com/kiwix/kiwix-js-pwa/releases) — choose the **portable Windows 10/11 Electron `.exe`** asset (for example, `Kiwix-JS-Electron-3.9.3-E.exe`; version may change). Put it directly in `Kiwix\`. CacheNorth also recognizes the old `kiwix-js-pwa-win32-ia32\Kiwix JS Electron.exe` layout. Avoid installer, `.appx`, and XP/Vista legacy builds.
 
 **How:** Download the selected `.zim` file → put it in `Library` → choose **Refresh All** → open **Knowledge Base**. If an archive will not open, verify that the Kiwix viewer is present and that the path matches [Installation](INSTALLATION.md#6-add-offline-archives-optional).
 
