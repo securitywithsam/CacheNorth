@@ -1,0 +1,54 @@
+# PROPOSED workflow. It has been checked locally (same commands) but has not yet run on GitHub.
+# It needs no secrets, uploads no artifacts, and never downloads models, archives, or GPU drivers.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pinned test dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements/test.txt
+
+      - name: Python tests
+        run: python -m pytest --basetemp="${{ runner.temp }}\pytest"
+
+      - name: Dashboard tests and JavaScript syntax
+        run: |
+          node --test tests/dashboard_keydown.test.js
+          node --check dashboard/app.js
+
+      - name: Static checks (compile all Python, validate JSON manifests)
+        shell: pwsh
+        run: |
+          python -m compileall -q src scripts tests
+          Get-Content third_party/manifest.json -Raw | ConvertFrom-Json | Out-Null
+          Get-ChildItem tests/fixtures -Filter *.json | ForEach-Object { Get-Content $_.FullName -Raw | ConvertFrom-Json | Out-Null }
+
+      - name: Source integrity (no binaries, models, or personal data committed)
+        shell: pwsh
+        run: |
+          $blocked = git ls-files | Where-Object { $_ -match '\.(exe|dll|pyd|gguf|zim|map|sqlite3|nupkg|zip|log)$' -or $_ -match '(^|/)(Data|dist|build|release|output)/' }
+          if ($blocked) { $blocked; throw "Files that must not be committed were found." }
+
+      - name: Dependency vulnerability audit
+        run: |
+          python -m pip install --disable-pip-version-check pip-audit==2.9.0
+          python -m pip_audit -r requirements/runtime.txt -r requirements/build.txt

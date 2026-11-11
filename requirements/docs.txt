@@ -1,0 +1,7 @@
+# Optional: regenerate the branded PDF guides (scripts/create_cache_north_guides.py).
+reportlab==4.4.4
+pdfplumber==0.11.10
+pdfminer.six==20260107
+pypdfium2==5.14.0
+pillow==13.0.0
+charset-normalizer==3.5.2

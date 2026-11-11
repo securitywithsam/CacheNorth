@@ -1,70 +1,53 @@
-# Private or user-generated data
-**/Data/
-**/data/Chats/
-**/data/Index/
-**/data/Logs/
-**/WebView2/
-*.sqlite3
-*.sqlite3-*
-*.db-wal
-*.db-shm
-*.log
-*.tmp
-*.bak
-*.mrimgx
+# Python environment and caches
+.venv/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# Secrets and machine-specific configuration
-.env
-.env.*
-!.env.example
-*.pfx
-*.p12
-*.pem
-*.key
-*.snk
-**/settings.json
-**/*-session.json
-**/session.json
+# Build output and downloads (never commit binaries)
+build/
+dist/
+release/
+output/
+tmp/
+third_party/cache/
+.packages/
+vendor/
+*.exe
+*.dll
+*.pyd
+*.nupkg
+*.zip
 
-# Models, offline data, and USB images
+# Large content and personal data
 *.gguf
-*.ggml
-*.safetensors
 *.zim
 *.map
 *.mbtiles
 *.pmtiles
-*.vhd
-*.vhdx
-*.iso
-*.img
-*.mrimg
-*.mrimgx
+Data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.log
+*session*.json
+settings.json
+model-compatibility.json
 
-# Generated builds and test output
-/build/
-/dist/
-/release/
-/output/
-/tmp/
-/.venv/
-/venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.coverage
-htmlcov/
-node_modules/
-*.user
-*.suo
-bin/
-obj/
-*.zip
-*.7z
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.pfx
 
-# OS/editor files
-.DS_Store
-Thumbs.db
-.idea/
-.vs/
+# Editors and OS
 .vscode/
+.idea/
+Thumbs.db
+desktop.ini

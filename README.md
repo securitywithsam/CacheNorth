@@ -1,63 +1,94 @@
+<p align="center"><img src="dashboard/cache-north-logo.png" alt="CacheNorth logo" width="120"></p>
+
 # CacheNorth
 
-**Your knowledge. Anywhere.**
+<p align="center"><strong>Your knowledge. Anywhere.</strong><br>Portable offline AI, knowledge, maps and guides — by <a href="https://github.com/securitywithsam">Security With Sam</a></p>
 
-CacheNorth is an offline-first, portable Windows toolkit by **Security With Sam**. It brings local AI chat, document search, offline reference libraries, maps, and practical guides together in one interface that can run from a USB drive.
+CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status:** Public source and downloads are being prepared. This repository documentation is a draft until the final compatibility, security, and third-party rights checks pass. There is no public installer or complete USB image available from this page yet.
+> **Release status: v1.0.3 preview.** The full portable package has been prepared but is **not publicly downloadable yet**. The repository is private while security, licensing, and compatibility checks are completed. The original CacheNorth code does not yet have a public license. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
 
-## What CacheNorth does
+## Download CacheNorth
 
-- **Local AI chat:** Run compatible GGUF models through KoboldCpp without sending prompts to a hosted AI provider.
-- **Ask Documents:** Search locally indexed documents and retrieve source-backed answers with citations.
-- **Offline knowledge:** Discover compatible Kiwix ZIM archives stored on the drive.
-- **Offline maps:** Open map resources using a compatible map viewer.
-- **Guides:** Browse locally stored PDF help and reference material.
-- **Portable dashboard:** A Windows launcher and WebView2 interface with a browser fallback.
-- **Hardware-aware options:** CPU inference, optional Vulkan acceleration, model selection, and configurable context length where supported.
+| Package | What you get | Status |
+|---|---|---|
+| **Full Portable USB ZIP** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; current candidate is **16.9 GiB (18,183,434,240 bytes)** | **Coming soon** — verified download link will be added here after release checks and hosting setup |
+| **Source project** | Application code, tests, build scripts and documentation | In review on this private repository; for developers |
 
-CacheNorth is designed to work without an internet connection. Some separately bundled third-party programs or Windows components may use network services when online; those behaviors are being reviewed and documented before public release.
+**When released:** download the Full Portable ZIP → extract it to a writable USB drive or a folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
 
-## Platform and requirements
+**Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
 
-- **Primary target:** Windows 11, x64.
-- **Other environments:** Windows 10, older CPUs, lower-memory systems, and different GPUs require additional physical acceptance testing.
-- **Models and content:** Users will need to provide compatible models and knowledge resources from sources whose terms allow their intended use.
-- **Storage:** Depends heavily on the selected models, maps, and offline archives.
+### Start here
 
-## Project structure
+| I want to… | Open this guide |
+|---|---|
+| **Add my own models, Wikipedia, maps or PDFs** | **[Customize Your USB — folder map and download links](docs/CUSTOMIZE_YOUR_USB.md)** |
+| See beginner setup instructions | [Getting Started](docs/GETTING_STARTED.md) |
+| Download specific models, ZIM archives and maps | [Content Sources](docs/CONTENT_SOURCES.md) |
+| Troubleshoot or change settings | [Troubleshooting](docs/TROUBLESHOOTING.md) · [Configuration](docs/CONFIGURATION.md) |
+| Build CacheNorth myself | [Developer Build Guide](docs/BUILDING.md) |
 
-The planned public source layout separates original application code from external content:
+## Where do my files go?
 
-| Folder | Purpose |
-| --- | --- |
-| `src/` | Python application and services |
-| `dashboard/` | Local web interface |
-| `launcher/` | Native Windows launcher |
-| `scripts/` | Build, verification, and maintenance scripts |
-| `tests/` | Automated regression tests |
-| `docs/` | Architecture, setup, troubleshooting, and compatibility notes |
-| `.github/` | Community templates and automation |
+The drive letter changes between computers. These are the paths **inside the CacheNorth USB/folder**, wherever you extracted it.
 
-These folders will be populated from the final reviewed source tree. Large GGUF/ZIM/map files, personal data, and development builds should not be committed to Git history.
+| Content | Put files in this folder | File types |
+|---|---|---|
+| **AI models** | `Apps\Offline AI\Models\` | `.gguf` |
+| **Offline knowledge** | `Library\` | `.zim` |
+| **Offline maps** | `Maps\` | Mapsforge `.map` |
+| **PDF guides** | `Guides\` | `.pdf` |
+| **Documents for AI search** | `Apps\Offline AI\Data\Documents\` | `.pdf`, `.txt`, `.md` |
 
-## Build and setup
+> **[See the complete illustrated USB folder map, exact steps, and official download links →](docs/CUSTOMIZE_YOUR_USB.md)**
 
-Reproducible build instructions and verified dependency versions will be published after the final application candidate passes review. For now, please do not treat the development USB contents as an approved redistribution package.
+You can keep optional folders empty or fill them with content relevant to you. After copying files, open CacheNorth and use **Refresh All** (or **Refresh Documents** for document search). The full portable package, once released, is intended to remove the need to install developer tools.
 
-## Privacy and safety
+## Pick your offline content
 
-- The local inference API is intended to bind to the local computer.
-- Conversations and imported documents stored on removable media may be readable by anyone who obtains that drive unless it is encrypted.
-- AI-generated information can be inaccurate. Verify important technical, medical, emergency, and safety information against trusted sources.
-- Respect Windows application-control decisions; CPU inference should remain available when optional GPU libraries are blocked.
+| Category | Good starting point | Source |
+|---|---|---|
+| **AI** | Qwen3 1.7B for lighter computers, or Qwen3 4B for 16 GB+ RAM | [Official Qwen GGUF models](https://huggingface.co/Qwen) |
+| **Wikipedia and other knowledge** | Simple English Wikipedia, Wikivoyage, subject-specific archives | [Kiwix Library](https://library.kiwix.org/) |
+| **Maps** | A state, country or region you actually need | [Mapsforge map downloads](https://download.mapsforge.org/maps/v5/) |
+| **Preparedness guides** | Emergency kit, family plans, weather safety | [Ready.gov](https://www.ready.gov/) · [NWS publications](https://www.weather.gov/owlie/publication_brochures) |
 
-## License and third-party components
+Each category has different file formats and licenses. **[Follow the customization guide](docs/CUSTOMIZE_YOUR_USB.md)** for the correct folders and steps. Downloads require internet upfront; the finished toolkit is designed for offline use.
 
-**The CacheNorth project's own license has not yet been selected.** Repository visibility alone does not grant reuse rights. Third-party applications and content have separate licenses and attribution requirements. See [`docs/SUPPLY_CHAIN_AND_LICENSE_REVIEW.md`](docs/SUPPLY_CHAIN_AND_LICENSE_REVIEW.md) before distributing any binary or data bundle.
+## What it can do
 
-## Contributing and support
+- **Private AI chat:** local GGUF models using KoboldCpp, with CPU-first startup and optional experimental Vulkan GPU acceleration.
+- **Ask Documents:** query your PDFs, text and Markdown files, with source references.
+- **Knowledge Base:** browse offline `.zim` archives through the optional Kiwix viewer.
+- **Offline Maps:** open compatible Mapsforge `.map` files through GPXSee.
+- **Guides:** browse your own PDF reference library.
+- **Portable layout:** drive-letter-independent paths, refreshable libraries, customizable models and context settings.
 
-Community contribution guidance is in [`CONTRIBUTING.md`](CONTRIBUTING.md). Please use GitHub Issues for reproducible bugs and feature requests once the public repository opens. For security concerns, follow [`SECURITY.md`](SECURITY.md).
+## Computer requirements
 
-Created by **Security With Sam**.
+| | Minimum / status | Better experience |
+|---|---|---|
+| OS | Windows 10/11, 64-bit; **Windows 11 tested** | Windows 11 64-bit |
+| Memory | 8 GB target; physical 8 GB system not yet validated | 16 GB+ |
+| CPU | x86-64; AVX2 strongly preferred | Recent 6-core or better |
+| Storage | App ~0.4 GB plus models/content | USB 3 drive or external SSD with plenty of space |
+| GPU | Optional; CPU works without a dedicated GPU | Vulkan-capable GPU for experimental acceleration |
+
+The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth can fall back to the default browser. Windows may warn about unsigned executables, and restricted systems can block components. Do not disable Windows security protections just to run it.
+
+## Important notes
+
+- **Public download still pending:** the prepared Full ZIP has not yet passed release distribution checks. A link will be posted above once cleared.
+- **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
+- **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
+- **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
+- **Tested hardware:** the Windows 11 desktop build was tested on an AMD Ryzen 7 7800X3D/RTX 3080 machine. Intel laptop field logs cover earlier versions; v1.0.3 validation on that laptop, Windows 10, 8/16 GB devices, and managed PCs remains pending.
+
+## For developers
+
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source import is being reviewed separately from any compiled binary or full USB release.
+
+To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
+
+"CacheNorth", "Security With Sam", and their logos are brand assets and are not covered by any future code license. Third-party trademarks belong to their owners.

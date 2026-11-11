@@ -4,7 +4,7 @@ This document is a staging requirement, not a declaration that CacheNorth is rea
 
 ## Input
 
-Use the latest **verified v1.0.3** development source at `C:\Users\Samso\Desktop\Codex\security-with-sam-offline-ai`. Inspect the latest Claude changes and test reports before exporting. Never export a copied USB installation as the canonical source.
+Use the latest **verified v1.0.3** development source at the owner's private development workspace. Inspect the latest Claude changes and test reports before exporting. Never export a copied USB installation as the canonical source.
 
 ## Deliver a source-only export
 

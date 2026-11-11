@@ -1,19 +1,28 @@
-# Security Policy
+# Security
 
 ## Reporting a vulnerability
 
-Please avoid posting exploitable security details or sensitive tokens in a public issue. Use GitHub's private vulnerability reporting feature if it is enabled for this repository. Otherwise contact the project maintainer privately through an official Security With Sam contact channel listed on the published project profile.
+Please report security problems privately through GitHub's **Report a vulnerability** button on this repository's Security tab (private vulnerability reporting), not in a public issue. Include the CacheNorth version, Windows version, and steps to reproduce. Do not include personal documents or conversations.
 
-Include a minimal reproduction, affected version, expected security boundary, and impact. Remove personal conversation contents, identifiable file paths, tokens, and sensitive documents.
+## Security model
 
-## Supported versions
+- **Local only.** The CacheNorth backend and KoboldCpp listen on `127.0.0.1` with random ports. Nothing is exposed to the network.
+- **Session token.** Every API request needs a random per-session token (passed to the dashboard in the URL fragment, which browsers never send to servers). Requests with a non-loopback `Host` or a cross-origin `Origin` are rejected, and responses carry a restrictive Content-Security-Policy, `nosniff`, and frame denial.
+- **KoboldCpp** gets a random per-session password and runs inside a Windows Job Object, so it cannot outlive CacheNorth.
+- **Files.** Document, guide, archive, map, and model operations are confined to their folders with exact-name checks; uploads are limited to PDF/TXT/Markdown up to 250 MB. Subprocesses are started with argument lists, never a shell.
+- **Untrusted documents.** Retrieved passages are marked as untrusted data inside the prompt, and the model is told to ignore instructions in them. This reduces but cannot eliminate prompt injection by a malicious document; the model has no tools and cannot run commands or reach files.
+- **Native window.** WebView2 navigation is limited to the local dashboard; new windows, downloads, permission requests, context menus, and developer tools are blocked.
+- **Build inputs.** Third-party binaries are downloaded from official sources and checked against SHA-256 values in `third_party/manifest.json`. A mismatch stops the build.
+- **Windows security.** CacheNorth never disables or bypasses Microsoft Defender, Smart App Control, or App Control. If Windows blocks a component, CacheNorth falls back to CPU mode and reports it.
 
-Public version support has not yet been announced. Until then, development and personal-test builds should not be considered production security releases.
+## Known limitations
 
-## Security principles
-
-- Local AI services bind only to a loopback interface.
-- Keep Windows security controls enabled; do not disable Smart App Control or Defender to make optional acceleration work.
-- Keep third-party components current and verify their source and hashes.
-- Do not assume removable media encrypts stored chats or indexed documents.
-- Do not submit customer data, logs containing tokens, or signing credentials in issues or pull requests.
+- **Data at rest is not encrypted.** Conversations, documents, and indexes are stored in plain files on the drive. Use an encrypted drive (for example BitLocker To Go) if it could be lost. Clearing conversations deletes database rows but does not guarantee the data is unrecoverable from flash storage.
+- **Executables are unsigned.** Windows SmartScreen or Smart App Control may warn about or block them; KoboldCpp's GPU libraries are also unsigned upstream.
+- **Other local processes** running as the same Windows user can read CacheNorth's files, including the session file while it runs, and can see the KoboldCpp password on its command line. CacheNorth does not defend against malware already on the computer.
+- **PDF parsing** runs inside the backend without a time limit. A deliberately malformed PDF could slow or stall indexing. Only add documents you trust.
+- **Third-party components:**
+  - KoboldCpp 1.124.2 embeds its own Python 3.8 and OpenSSL 1.1.1, both end-of-life upstream. This exposure is reduced because CacheNorth keeps KoboldCpp on loopback with a password.
+  - The WebView2 runtime and Kiwix JS may contact Microsoft or GitHub services when the computer is online.
+  - Keep dependencies updated in `requirements/` and `third_party/manifest.json`.
+- **Model output can be wrong.** Verify medical, legal, navigation, electrical, and emergency information against authoritative sources.

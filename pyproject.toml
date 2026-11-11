@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "security-with-sam-offline-ai"
+version = "1.0.3"
+description = "CacheNorth portable local AI and document search by Security With Sam"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "Flask==3.1.3",
+  "py-cpuinfo==9.0.0",
+  "pypdf==6.21.4",
+  "psutil==7.1.2",
+  "waitress==3.0.2",
+  "cryptography==50.0.2",
+]
+# Exact pins for every transitive dependency live in requirements/*.txt.
+
+[project.optional-dependencies]
+build = ["PyInstaller==6.16.0"]
+test = ["pytest==9.0.3", "pytest-cov==7.0.0"]
+docs = ["reportlab==4.4.4", "pdfplumber==0.11.10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

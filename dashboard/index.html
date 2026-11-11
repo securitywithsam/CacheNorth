@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050a10">
+  <title>CacheNorth by Security With Sam</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div id="startup-screen" class="startup-screen">
+    <img src="/assets/cache-north-logo.png" alt="Security With Sam">
+    <p class="eyebrow">SECURITY WITH SAM</p>
+    <h1>CacheNorth</h1>
+    <p>Your knowledge. Anywhere.</p>
+    <div class="startup-track"><span></span></div>
+    <small>Preparing your private offline workspace</small>
+  </div>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="/assets/cache-north-logo.png" alt="Security With Sam logo">
+        <div><p>SECURITY WITH SAM</p><h1>CacheNorth</h1><span>Your knowledge. Anywhere.</span></div>
+      </div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-section="chat"><span>01</span>AI Chat</button>
+        <button class="nav-item" data-section="library"><span>02</span>Knowledge Library</button>
+        <button class="nav-item" data-section="documents"><span>03</span>Document Search</button>
+        <button class="nav-item" data-section="maps"><span>04</span>Offline Maps</button>
+        <button class="nav-item" data-section="guides"><span>05</span>Guides</button>
+        <button class="nav-item" data-section="settings"><span>06</span>Settings</button>
+        <button class="nav-item" data-section="status"><span>07</span>System Status</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="engine-pill"><span id="engine-dot" class="dot pending"></span><span id="engine-label">Preparing local AI</span></div>
+        <button id="shutdown-button" class="button ghost full">Close CacheNorth</button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div><p class="eyebrow" id="section-eyebrow">PRIVATE LOCAL AI</p><h2 id="section-title">AI Chat</h2></div>
+        <div class="topbar-actions"><button id="refresh-all" class="button ghost">Refresh All</button><div class="privacy-badge">OFFLINE-FIRST · LOCAL PROCESSING</div></div>
+      </header>
+
+      <div id="global-message" class="notice hidden" role="status"></div>
+
+      <section id="section-chat" class="section active" aria-labelledby="section-title">
+        <div class="chat-toolbar">
+          <div class="segmented" role="group" aria-label="Chat mode">
+            <button class="mode-button active" data-mode="general">General AI</button>
+            <button class="mode-button" data-mode="documents">Ask Documents</button>
+          </div>
+          <div class="history-controls">
+            <label class="sr-only" for="conversation-list">Saved conversations</label>
+            <select id="conversation-list"><option value="">Current conversation</option></select>
+            <button id="new-chat" class="button ghost">New chat</button>
+          </div>
+        </div>
+        <div id="chat-mode-note" class="mode-note">General answers come from the local model. Verify important information.</div>
+        <div id="messages" class="messages" aria-live="polite">
+          <div class="empty-state">
+            <img src="/assets/cache-north-logo.png" alt="">
+            <p class="eyebrow">WELCOME TO CACHENORTH</p>
+            <h3>Ask privately. Work offline.</h3>
+            <p>Enter a question below, or choose Ask Documents for answers supported by files you add.</p>
+          </div>
+        </div>
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input">Message</label>
+          <textarea id="message-input" rows="2" maxlength="12000" placeholder="Ask CacheNorth a question"></textarea>
+          <div class="composer-actions">
+            <span id="generation-state">Ready</span>
+            <div>
+              <button id="stop-generation" class="button danger hidden" type="button">Stop</button>
+              <button id="send-message" class="button primary" type="submit">Send</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section id="section-library" class="section">
+        <div class="section-intro"><div><p class="eyebrow">OFFLINE REFERENCE COLLECTION</p><h3>Knowledge Library</h3><p>Open ZIM archives with the independent Kiwix application. Kiwix archive search is separate from Ask Documents.</p></div><div class="button-row"><button class="button ghost open-folder" data-folder="library">Open Folder</button><button id="refresh-library" class="button ghost">Refresh Library</button><button id="open-kiwix" class="button primary">Open Kiwix</button></div></div>
+        <div id="library-summary" class="summary-banner"></div>
+        <label class="search-box"><span>Filter by title, filename, category, or date</span><input id="library-filter" type="search" placeholder="Filter knowledge sources"></label>
+        <div id="archive-list" class="resource-list"></div>
+        <div class="info-panel"><strong>Choose a source</strong><p>Select Open in Kiwix beside an archive. Archive dates show when each offline copy was created. These third-party references remain subject to their publishers' terms.</p></div>
+      </section>
+
+      <section id="section-documents" class="section">
+        <div class="section-intro"><div><p class="eyebrow">YOUR PRIVATE FILES</p><h3>Document Search</h3><p>Index PDF, TXT, and Markdown files locally, then ask questions with verifiable source cards.</p></div>
+          <div class="button-row"><button class="button ghost open-folder" data-folder="documents">Open Folder</button><button id="refresh-documents" class="button ghost">Refresh Documents</button><button id="rebuild-index" class="button ghost">Rebuild index</button><button id="add-document" class="button primary">Add documents</button></div>
+        </div>
+        <input id="document-picker" type="file" accept=".pdf,.txt,.md" multiple hidden>
+        <div id="index-progress" class="progress-card hidden"><div class="progress-copy"><strong id="progress-message">Indexing</strong><span id="progress-percent">0%</span></div><div class="progress-track"><div id="progress-fill"></div></div></div>
+        <label class="search-box"><span>Filter indexed filenames</span><input id="document-filter" type="search" placeholder="Filter this list by filename"></label>
+        <div id="document-list" class="resource-list"></div>
+        <div class="info-panel"><strong>Source integrity</strong><p>CacheNorth displays citations from indexed records, including the original filename, page number when available, and supporting excerpt. Image-only PDFs need OCR.</p></div>
+      </section>
+
+      <section id="section-maps" class="section">
+        <div class="section-intro"><div><p class="eyebrow">REGIONAL MAP DATA</p><h3>Offline Maps</h3><p>View downloaded Mapsforge files locally with the portable GPXSee viewer.</p></div><div class="button-row"><button class="button ghost open-folder" data-folder="maps">Open Folder</button><button id="refresh-maps" class="button ghost">Refresh Maps</button><button id="open-maps" class="button primary">Open Maps</button></div></div>
+        <div id="maps-summary" class="summary-banner"></div>
+        <div id="map-list" class="resource-list"></div>
+        <div class="warning-panel"><strong>Map viewing, not navigation</strong><p>Offline maps do not provide live traffic, current closures, GPS guidance, or turn-by-turn navigation. Confirm routes with current authoritative information.</p></div>
+      </section>
+
+      <section id="section-guides" class="section">
+        <div class="section-intro"><div><p class="eyebrow">PORTABLE REFERENCE FILES</p><h3>Guides</h3><p>Open emergency, navigation, weather, and CacheNorth help PDFs directly from this drive.</p></div><div class="button-row"><button class="button ghost open-folder" data-folder="guides">Open Folder</button><button id="refresh-guides" class="button ghost">Refresh Guides</button></div></div>
+        <div id="guides-summary" class="summary-banner"></div>
+        <div id="guide-list" class="resource-list"></div>
+      </section>
+
+      <section id="section-settings" class="section">
+        <div class="section-intro"><div><p class="eyebrow">LOCAL PREFERENCES</p><h3>Settings</h3><p>Settings are stored in the CacheNorth data folder on this drive.</p></div></div>
+        <article class="model-manager">
+          <div class="model-manager-head"><div><p class="eyebrow">AI MODEL MANAGER</p><h3>Choose the local model</h3><p>Automatic mode selects a validated model conservatively for this computer. Manual choices are rechecked at every startup.</p></div><div class="button-row"><button class="button ghost open-folder" data-folder="models">Open Models Folder</button><button id="refresh-models" class="button ghost">Refresh Models</button><button id="restore-model" class="button primary">Automatic (recommended)</button></div></div>
+          <div id="model-summary" class="summary-banner"></div>
+          <div id="model-list" class="resource-list"></div>
+        </article>
+        <div class="settings-grid">
+          <article class="setting-card">
+            <div><span class="setting-number">01</span><h3>AI acceleration</h3><p>CPU works on every computer. GPU acceleration is optional, is remembered separately for each computer, and falls back to CPU if it cannot start.</p></div>
+            <label for="acceleration-mode">Execution mode</label>
+            <select id="acceleration-mode">
+              <option value="cpu">CPU — Recommended (default)</option>
+              <option value="auto_vulkan">Automatic GPU — Experimental</option>
+              <option value="manual_vulkan">Manual GPU — Advanced</option>
+            </select>
+            <label for="vulkan-device">Graphics device</label>
+            <select id="vulkan-device" disabled><option value="">No graphics devices reported by Windows</option></select>
+            <p id="acceleration-note" class="resource-meta">CacheNorth never installs or changes graphics drivers and never bypasses Windows security. GPU use is reported only when the AI engine confirms it.</p>
+            <p id="acceleration-status" class="resource-meta" aria-live="polite"></p>
+            <button id="apply-acceleration" class="button primary">Apply and restart AI</button>
+          </article>
+          <article class="setting-card">
+            <div><span class="setting-number">02</span><h3>Context length</h3><p>How much of the conversation and documents the AI can consider at once. Larger contexts use more memory and take longer to read on a CPU. Saved for this computer only.</p></div>
+            <label for="context-size">Context length</label>
+            <select id="context-size"><option value="auto">Automatic (recommended)</option></select>
+            <p id="context-estimate" class="resource-meta"></p>
+            <div id="context-warning" class="warning-panel hidden">
+              <p id="context-warning-text"></p>
+              <label class="resource-meta"><input id="context-override" type="checkbox"> I understand this may exceed this computer's memory. Try it anyway (CacheNorth falls back to a safe size if it cannot start).</label>
+            </div>
+            <p id="context-status" class="resource-meta" aria-live="polite"></p>
+            <button id="apply-context" class="button primary">Apply and restart AI</button>
+          </article>
+          <article class="setting-card">
+            <div><span class="setting-number">03</span><h3>Conversation privacy</h3><p>Saved conversations stay in the portable data folder until you clear them.</p></div>
+            <button id="clear-history" class="button danger">Clear saved conversations</button>
+          </article>
+          <article class="setting-card">
+            <div><span class="setting-number">04</span><h3>Safe operation</h3><p>Close CacheNorth, Kiwix, GPXSee, and opened documents before using Windows Safely Remove Hardware.</p></div>
+            <button id="settings-close" class="button ghost">Close CacheNorth</button>
+          </article>
+          <article class="setting-card help-card">
+            <div><span class="setting-number">05</span><h3>Quick help</h3><p>Open the included guides or browse the help folder. All help remains available offline.</p></div>
+            <div class="help-actions"><button id="open-quick-start" class="button ghost">Open Quick Start Guide</button><button id="open-troubleshooting" class="button ghost">Open Troubleshooting Guide</button><button id="open-help-folder" class="button ghost">Open Help Folder</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="section-status" class="section">
+        <div class="section-intro"><div><p class="eyebrow">READINESS CHECK</p><h3>System Status</h3><p>Hardware, storage, local resources, and AI readiness at a glance.</p></div><button id="refresh-status" class="button ghost">Refresh</button></div>
+        <div id="readiness-banner" class="readiness-banner pending"><strong>Checking this computer</strong><span>Please wait</span></div>
+        <div id="status-grid" class="status-grid"></div>
+        <div id="computer-panel" class="computer-panel"></div>
+        <div id="storage-panel" class="computer-panel"></div>
+        <details id="advanced-status" class="advanced-panel"><summary>Advanced Details</summary><div id="advanced-status-grid" class="status-grid"></div></details>
+      </section>
+    </main>
+  </div>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

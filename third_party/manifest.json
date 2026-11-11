@@ -1,0 +1,41 @@
+{
+  "_comment": "Third-party build inputs. CacheNorth's repository contains none of these binaries; scripts/fetch_third_party.ps1 downloads them from the official URLs below and refuses any file whose SHA-256 differs.",
+  "components": [
+    {
+      "name": "koboldcpp",
+      "version": "1.124.2",
+      "file": "koboldcpp-nocuda.exe",
+      "url": "https://github.com/LostRuins/koboldcpp/releases/download/v1.124.2/koboldcpp-nocuda.exe",
+      "sha256": "C66550F4852A03BA992132A55BC0B1BB401851967005F10A3B7B7434484AED14",
+      "size": 89911337,
+      "hash_source": "Matches the SHA-256 digest GitHub publishes for this release asset (checked 2026-11-04).",
+      "unpacked_tree_sha256": "C9422A92F2B5748D7D27FE0CD0BBB0D0FBE013DE6909C6A7B4F5A1DC68BFFCD6",
+      "unpacked_file_count": 1304,
+      "license": "AGPL-3.0 (with separately licensed bundled components)",
+      "project": "https://github.com/LostRuins/koboldcpp"
+    },
+    {
+      "name": "webview2-sdk",
+      "version": "1.0.4314.35",
+      "file": "Microsoft.Web.WebView2.1.0.4314.35.nupkg",
+      "url": "https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2/1.0.4314.35",
+      "sha256": "90778DEB1B77E36292828B4B5833C9255C27533F40E0DDD55891AE718944EDC4",
+      "size": 9818548,
+      "hash_source": "Hash of the package used to build and test CacheNorth v1.0.1-v1.0.3. Not yet re-checked against a fresh nuget.org download.",
+      "license": "Microsoft WebView2 SDK license (included in the package as LICENSE.txt)",
+      "project": "https://www.nuget.org/packages/Microsoft.Web.WebView2"
+    },
+    {
+      "name": "python-installer",
+      "version": "3.12.8",
+      "file": "python-3.12.8-amd64.exe",
+      "url": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
+      "sha256": "71BD44E6B0E91C17558963557E4CDB80B483DE9B0A0A9717F06CF896F95AB598",
+      "size": null,
+      "optional": true,
+      "hash_source": "Hash of the installer used for the CacheNorth build environment. Only needed if you do not already have Python 3.12.",
+      "license": "PSF License",
+      "project": "https://www.python.org/downloads/release/python-3128/"
+    }
+  ]
+}
