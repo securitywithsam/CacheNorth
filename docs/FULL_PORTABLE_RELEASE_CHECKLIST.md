@@ -1,11 +1,10 @@
 # CacheNorth v1.0.3.1 — release checklist
 
-**Current status:** cleaned application tested. Owner reports ZIP `CacheNorth-v1.0.3.1-Full-Portable.zip`, 15,993,029,771 compressed bytes and SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. Hosted availability/integrity and rights questions remain pending. The [original v1.0.3 ZIP and hash](../SHA256SUMS.txt) are historical. See [release candidate details](V1031_RELEASE_CANDIDATE.md).
+**Current status:** application tested. Owner reports ZIP `CacheNorth-v1.0.3.1-Full-Portable.zip`, 15,993,029,771 compressed bytes and SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. Hosted availability/integrity and rights questions remain pending. The [current ZIP checksum](../SHA256SUMS.txt) is for v1.0.3.1. See [release candidate details](V1031_RELEASE_CANDIDATE.md).
 
 ## Before updating the download link
 
-- [x] Preserve original ZIPs and old checksums.
-- [x] Remove generated chats, indexes, WebView2 profiles, logs and sessions from cleaned copy.
+- [x] Remove generated chats, indexes, WebView2 profiles, logs and sessions from portable package.
 - [x] Verify retained Qwen models, archives and maps against known published files as reported by maintainer.
 - [x] Include notices, attribution and corresponding source materials identified during cleanup.
 - [x] Update three branded help PDFs and verify they open.
@@ -27,4 +26,4 @@
 - [ ] Test GPU acceleration, document file picker and actual downloaded-ZIP SmartScreen behavior.
 - [ ] Confirm all user-facing links and in-package PDF file paths.
 
-The repository's source CI does **not** certify the large hosted ZIP. For a historical checklist, see [the archived v1.0.3 version](archive/FULL_PORTABLE_RELEASE_CHECKLIST_v103.md).
+The repository's source CI does **not** certify the large hosted ZIP. 

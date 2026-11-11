@@ -6,30 +6,26 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3.1 download metadata recorded; live URL verification pending.** A cleaned portable build has passed the maintainer's 19 functional tests; further hardware and redistribution checks remain. The v1.0.3 URL below is the **original archived package**; the v1.0.3.1 URL is based on the owner's planned Cloudflare object name. See [v1.0.3.1 package notes](docs/V1031_RELEASE_CANDIDATE.md). Original CacheNorth code retains its limited proprietary early-access license; third-party components retain their own licenses.
+> **CacheNorth v1.0.3.1 — free early access.** Portable local AI, knowledge, maps and guides. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
 
 ## Download CacheNorth
 
-**v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
+**[Download CacheNorth v1.0.3.1 — Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)**
 
-| Package | What you get | Status |
-|---|---|---|
-| **[v1.0.3.1 Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)** — `CacheNorth-v1.0.3.1-Full-Portable.zip` | Cleaned full portable package, **15,993,029,771 bytes compressed** | Filename, size and hash supplied by owner; **hosted download awaiting independent verification** |
-| **[Original v1.0.3 ZIP (historical)](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Original v1.0.3 only; superseded by locally cleaned candidate (new ZIP pending)** |
-| **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
+- **Windows 10/11 (64-bit)**; tested on Windows 11.
+- **Size:** 15,993,029,771 bytes (about 14.9 GiB).
+- **SHA-256:** `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`
+- **Status:** Early access. The filename and checksum were provided by the maintainer; an independent hosted-download check is pending.
 
-**For the original v1.0.3 archive only:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
+### Get started in three steps
 
-**Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
+1. Download the ZIP using the link above. GitHub's **Code → Download ZIP** contains developer source, not the ready-to-run app.
+2. Extract the entire ZIP to a writable folder or USB drive (32 GB or more recommended). Open the extracted `CacheNorth-v1.0.3.1-Full-Portable` folder.
+3. Double-click `Launch CacheNorth.exe`. Wait for the dashboard, then try **AI Chat**, **Knowledge Base**, **Maps**, or **Guides**.
 
-### Quick setup — original package (new archive pending)
+Windows may warn about unsigned software. Check the source and checksum, follow your device's security policy, and do not disable security protections to launch it.
 
-1. Download **Full Portable USB ZIP** from the official link above; **Code → Download ZIP** is source only.
-2. Extract the ZIP to a writable USB 3 drive (32 GB or larger recommended for the complete bundle) or a normal folder. **Open the resulting `CacheNorth-v1.0.3-Full-Portable` folder**; keep its contents together.
-3. Double-click **`Launch CacheNorth.exe`**, wait for the local dashboard, and explore the four libraries.
-4. To personalize it, copy `.gguf`, `.zim`, Mapsforge `.map`, or PDF files into the folders below and choose **Refresh All**.
-
-**First run checklist:** Confirm AI Chat responds, open one knowledge archive, view a map and PDF, then repeat the test with Wi-Fi disconnected. Exit CacheNorth and any external viewers before ejecting.
+For more help, open [Getting Started](docs/GETTING_STARTED.md), [Customize Your USB](docs/CUSTOMIZE_YOUR_USB.md), or [Troubleshooting](docs/TROUBLESHOOTING.md).
 
 ### Start here
 
@@ -59,25 +55,17 @@ You can keep optional folders empty or fill them with content relevant to you. A
 
 ### Verify your download
 
-The original local ZIP and a separate copy downloaded from `downloads.samsonschmidt.com` produced the same SHA-256:
+In PowerShell, run:
 
-```text
-486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17
+```powershell
+Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3.1-Full-Portable.zip" -Algorithm SHA256
 ```
 
-On Windows PowerShell, check your copy with `Get-FileHash "C:\Path\To\CacheNorth-v1.0.3-Full-Portable.zip" -Algorithm SHA256`. Match it against [SHA256SUMS.txt](SHA256SUMS.txt). **This verifies delivery integrity, not the package's security or third-party redistribution permissions.**
-
-### v1.0.3.1 SHA-256
-
-```text
-4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED  CacheNorth-v1.0.3.1-Full-Portable.zip
-```
-
-Run `Get-FileHash` against the downloaded v1.0.3.1 ZIP, and compare it with [SHA256SUMS.txt](SHA256SUMS.txt). The hash identifies bytes; it does not certify safety.
+Compare it with `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED` or [SHA256SUMS.txt](SHA256SUMS.txt). A matching hash confirms file identity, not safety.
 
 ## Pick your offline content
 
-**Bundled cleaned package:** Qwen3 1.7B, Qwen3 4B and Qwen3.5 4B have been checked against official published hashes. The model manager currently supports Qwen-family GGUFs only.
+**Bundled models:** Qwen3 1.7B, Qwen3 4B and Qwen3.5 4B have been checked against official published hashes. The model manager currently supports Qwen-family GGUFs only.
 
 | Category | Good starting point | Source |
 |---|---|---|
@@ -90,7 +78,7 @@ Each category has different file formats and licenses. **[Follow the customizati
 
 ## Preview the interface
 
-The cleaned package includes privacy-reviewed screenshots in its Quick Start and Troubleshooting PDFs; an optional repository README preview is still pending. Until then, the [Getting Started guide](docs/GETTING_STARTED.md) explains what to expect in each section. Never publish a screenshot containing personal chats, machine information, or real document names.
+The download includes privacy-reviewed screenshots in its Quick Start and Troubleshooting PDFs; an optional repository README preview is still pending. Until then, the [Getting Started guide](docs/GETTING_STARTED.md) explains what to expect in each section. Never publish a screenshot containing personal chats, machine information, or real document names.
 
 ## What it can do
 
@@ -119,7 +107,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## Important notes
 
-- **Early-access limitations:** the maintainer compared the local ZIP and a newly downloaded copy and found matching SHA-256 values. The **original v1.0.3 historical archive** contained generated runtime data; the cleaned v1.0.3.1 candidate removed it. Remaining Chromium/Electron source and iFixit content-rights questions still need resolution before broad distribution. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
+- **Early-access limitations:** This version passed 19 tests on one Windows 11 PC. Windows 10, low-memory systems, GPU mode and downloaded-ZIP security prompts need wider testing. Chromium/Electron source and iFixit noncommercial permissions remain under review. See [release checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md).
 - **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
 - **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
 - **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
@@ -127,7 +115,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not change the hosted v1.0.3 ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The cleaned package has been tested on one PC; it still requires a new hosted ZIP integrity record and remaining redistribution review.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not automatically change the hosted ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The package has been tested on one PC; it still requires a new hosted ZIP integrity record and remaining redistribution review.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 

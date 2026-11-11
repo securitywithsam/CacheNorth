@@ -12,7 +12,7 @@
 | [Ready.gov emergency PDFs](https://www.ready.gov/) | A useful `.pdf` guide | `Guides\` |
 | Your own documents | `.pdf`, `.txt`, `.md` | `Apps\Offline AI\Data\Documents\` |
 
-**Add files → open CacheNorth → Refresh All.** Use the documents refresh option for Ask Documents. The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted for private testing; the hosted-copy SHA-256 matches the original, while licensing, privacy, and hardware acceptance remain pending. See the [README](../README.md#download-cachenorth).
+**Add files → open CacheNorth → Refresh All.** Use the documents refresh option for Ask Documents. The [v1.0.3.1 Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) is the current download. Verify its SHA-256 against [SHA256SUMS.txt](../SHA256SUMS.txt); licensing and additional hardware checks remain open. See the [README](../README.md#download-cachenorth).
 
 
 CacheNorth's source repository contains **no AI model weights, ZIM archives, map data, third-party viewers, or personal PDF collection**. You choose and download these separately. Some material can be used personally but has restrictions on redistribution; read the upstream license before copying it into a publicly shared image.

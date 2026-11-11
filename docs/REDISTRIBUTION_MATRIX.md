@@ -2,7 +2,7 @@
 
 **Working document, not legal approval.** The detailed [current package inventory](CONTENT_LICENSES.md) and [third-party licenses](THIRD_PARTY_LICENSES.md) govern the current release candidate. Original v1.0.3 history is retained in [release notes](RELEASE_NOTES.md).
 
-| Item | Included in cleaned package? | Free distribution | Future paid version |
+| Item | Included in package? | Free distribution | Future paid version |
 |---|---|---|---|
 | Original CacheNorth launcher, backend, dashboard | Yes | Owner controls their original work; proprietary [LICENSE](../LICENSE) | Owner may offer separate terms |
 | KoboldCpp/aria2, Kiwix JS Electron, GPXSee/Qt/FFmpeg | Yes | Follow independent AGPL/GPL/LGPL/MPL and source/notice obligations; Chromium source coverage under review | Permitted only while meeting those obligations |

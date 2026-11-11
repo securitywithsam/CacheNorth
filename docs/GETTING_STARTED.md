@@ -1,10 +1,8 @@
-> **v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
-
 # Getting started with CacheNorth
 
 **Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
 
- > **Download status:** The [v1.0.3.1 cleaned ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) is the intended current package (owner-reported local size and SHA-256 above). The link and hosted bytes need independent verification; rights and cross-PC checks remain open.
+ > **Download status:** The [v1.0.3.1 ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) is the intended current package (owner-reported local size and SHA-256 above). The link and hosted bytes need independent verification; rights and cross-PC checks remain open.
 
 ## Which path should I follow?
 
