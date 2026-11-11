@@ -1,0 +1,29 @@
+# CacheNorth Original Code — Early Access License
+
+Copyright © 2026 Samson Schmidt (Security With Sam). All rights reserved.
+
+This notice applies only to the original CacheNorth application source code, dashboard, native launcher, original documentation, and branding created by Samson Schmidt or Security With Sam, to the extent the rights are owned by the copyright holder.
+
+## Limited early-access permission
+
+You may download and run an **unmodified official CacheNorth release** for personal, noncommercial evaluation and provide feedback. You may retain a reasonable personal backup. This is a limited, nonexclusive, revocable permission; it does not transfer copyright or ownership.
+
+Unless the copyright holder gives separate written permission, you may not redistribute or sell CacheNorth's original code or compiled application, publish modified or unofficial builds, sublicense the original work, or use the CacheNorth and Security With Sam names or logos to market another product.
+
+This is **not an open-source license**. Publicly visible source, if made available, is not a grant to copy, modify, or redistribute it.
+
+## Third-party components and content
+
+The restrictions above **do not replace or limit** licenses granted directly by third-party copyright holders. KoboldCpp, Kiwix, GPXSee, model weights, maps, ZIM archives, PDFs, portable applications, and their libraries are governed by their own terms, which may permit copying, modification, and redistribution independently of this notice. See [Third-party licenses](docs/THIRD_PARTY_LICENSES.md) and [Content licenses](docs/CONTENT_LICENSES.md).
+
+The official full portable ZIP may include third-party material under GPL, AGPL, Apache, Creative Commons, ODbL, proprietary, or other terms. Consult each applicable notice and corresponding-source offer. This file is not a license for that material.
+
+## Brand reservation
+
+"CacheNorth", "Security With Sam", associated logos, and product branding are reserved by their respective owners. Factual identification of compatible software and any legally permitted uses remain unaffected.
+
+## No warranty
+
+THE ORIGINAL CACHENORTH SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW. The authors make no promise of fitness for emergency response, medical, legal, navigation, or other safety-critical use.
+
+For licensing or commercial inquiries, contact Security With Sam through the project repository. Any future commercial license or open-source release must be documented separately.

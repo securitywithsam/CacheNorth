@@ -1,6 +1,6 @@
 # Third-party components and licenses
 
-This inventory separates Security With Sam's original work from third-party projects. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution.
+This inventory separates Security With Sam's original work from third-party projects. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The owner-supplied full ZIP inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
 
 ## 1. Original CacheNorth work (Security With Sam)
 
@@ -14,7 +14,7 @@ This inventory separates Security With Sam's original work from third-party proj
 | Documentation | `README.md`, `SECURITY.md`, `docs/` |
 | CacheNorth and Security With Sam logos and icons | `dashboard/cache-north-logo.png`, `dashboard/favicon.ico`, `launcher/CacheNorth.ico`, `docs/assets/` |
 
-**License:** not yet chosen; all rights reserved until one is published (see [LICENSE_RECOMMENDATION.md](LICENSE_RECOMMENDATION.md)). The names and logos are brand assets and stay outside any code license.
+**License:** original CacheNorth code and branding remain proprietary with limited personal early-access permission under [LICENSE](../LICENSE); see [LICENSE_RECOMMENDATION.md](LICENSE_RECOMMENDATION.md). The names and logos are brand assets and stay outside any code license.
 
 ## 2. Components bundled into a CacheNorth build
 

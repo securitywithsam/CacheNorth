@@ -6,7 +6,7 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3 preview.** The full portable package has been uploaded to the download host; **release verification is still in progress**. The repository is private while security, licensing, and compatibility checks are completed. The original CacheNorth code does not yet have a public license. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
+> **Release status: v1.0.3 preview.** The full portable package has been uploaded to the download host; **release verification is still in progress**. The repository is private while security, licensing, and compatibility checks are completed. Original CacheNorth code is **proprietary with limited personal early-access permission**; third-party software and content retain their own licenses. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
 
 ## Download CacheNorth
 
@@ -89,6 +89,10 @@ A real, privacy-reviewed screenshot of the Windows dashboard will be added befor
 | GPU | Optional; CPU works without a dedicated GPU | Vulkan-capable GPU for experimental acceleration |
 
 The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth can fall back to the default browser. Windows may warn about unsigned executables, and restricted systems can block components. Do not disable Windows security protections just to run it.
+
+## Licensing and commercial use
+
+Original CacheNorth source and branding remain **all rights reserved**, with limited personal noncommercial early-access use of official builds. See [LICENSE](LICENSE). Third-party applications, models, archives, maps, and PDFs have independent licenses and permissions; review the [bundled content register](docs/CONTENT_LICENSES.md). The iFixit archive carries CC BY-NC-SA terms; future paid bundling requires a separate commercial review or permission from iFixit.
 
 ## Important notes
 

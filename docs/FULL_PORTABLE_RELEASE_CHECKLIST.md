@@ -17,6 +17,8 @@
 
 ## 2. File-by-file redistribution register
 
+See [CONTENT_LICENSES.md](CONTENT_LICENSES.md) for the actual seven ZIMs, three model files, four map files, ten PDFs, optional portable installers, and iFixit's noncommercial/commercial requirements.
+
 For each redistributed binary, model, ZIM, map and PDF, record the exact archive-relative path, publisher, source/version, local SHA-256, license, attribution requirements, and permission to redistribute. Use this table as the starting point:
 
 | Component | Source | License/notice status | Action |
