@@ -1,8 +1,14 @@
+> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+
 # CacheNorth Troubleshooting
 
 ## CacheNorth does not open
 
-Open the portable drive in File Explorer and run `Launch CacheNorth.exe` from the drive root. Keep the `Apps` folder beside the launcher. If Windows shows a SmartScreen warning, verify that the file came from Security With Sam, inspect its digital-signature status, and follow your organization's security policy. Never disable Defender or SmartScreen.
+Open the portable drive in File Explorer and run `Launch CacheNorth.exe` from the drive root. Keep the `Apps` folder beside the launcher. If Windows shows a SmartScreen warning, verify that the file came from Security With Sam, check the official download source and SHA-256 (the app is unsigned), and follow your organization's security policy. Never disable Defender or SmartScreen.
+
+## A model shows unsupported or too large
+
+CacheNorth currently supports **Qwen-family GGUF** models only. An unsupported label may mean a different model architecture; choose one of the bundled Qwen models or check the source/model format. A too-large label means the model may exceed available system memory: choose Qwen3 1.7B, close memory-intensive programs, or use a machine with more RAM. Use **AI Model Manager** and **Refresh All** after adding a model.
 
 ## The AI engine does not start
 
@@ -18,7 +24,7 @@ Larger contexts do not make answers faster or smarter. A long conversation must 
 
 ## The computer has limited memory
 
-Systems reporting less than 10 GiB use a 2,048-token context. Close other applications before loading the model. Physical 8 GiB acceptance remains pending, so version 1.0.1 makes no 8 GiB compatibility guarantee.
+Systems reporting less than 10 GiB use a 2,048-token context. Close other applications before loading the model. Physical 8 GiB acceptance remains pending, so v1.0.3.1 has not been physically acceptance-tested on an 8 GiB computer.
 
 ## GPU acceleration is unavailable
 
