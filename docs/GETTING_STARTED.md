@@ -2,7 +2,7 @@
 
 **Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
 
- > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), but integrity, content rights, and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
+ > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), but SHA-256 matched a separately downloaded copy; content rights, privacy and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
 
 ## Which path should I follow?
 
@@ -17,8 +17,8 @@
 ## The easy USB setup (hosted preview)
 
 1. Download the verified **Full Portable ZIP** from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
-2. Extract it to a writable USB drive or folder. Keep the contents together and leave the existing paths unchanged.
-3. Open the extracted folder and double-click `Launch CacheNorth.exe`.
+2. Extract it to a writable USB drive or folder. **Open the extracted `CacheNorth-v1.0.3-Full-Portable` folder** and keep its contents together.
+3. Inside that folder, double-click `Launch CacheNorth.exe`.
 4. Explore **AI Chat**, **Knowledge Base**, **Maps**, and **Guides**. CacheNorth is designed to work offline after its resources have been downloaded.
 5. Want to add your own files? Open [Customize Your USB](CUSTOMIZE_YOUR_USB.md), copy files into the indicated folders, and choose **Refresh All**.
 
