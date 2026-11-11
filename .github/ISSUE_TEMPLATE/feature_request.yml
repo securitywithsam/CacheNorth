@@ -1,5 +1,5 @@
 name: Feature request
-description: Suggest an improvement to CacheNorth
+description: Suggest a way to make CacheNorth more useful or beginner-friendly
 title: "[Feature] "
 labels: [enhancement]
 body:
@@ -7,15 +7,32 @@ body:
     id: problem
     attributes:
       label: What problem would this solve?
+      description: Describe what you were trying to do.
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Proposed behavior
+      label: What would make this easier?
+      placeholder: "Describe the ideal experience without requiring technical terms."
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives and compatibility considerations
+      label: Alternatives or examples
+      description: Include any related feature or workflow.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Related CacheNorth section
+      options:
+        - AI chat and models
+        - Knowledge Base
+        - Offline maps
+        - PDF guides and documents
+        - Setup and USB portability
+        - Other
+  - type: markdown
+    attributes:
+      value: "Please do not attach private chats, credentials, or personal documents."
