@@ -7,13 +7,13 @@
 ## 1. Integrity and download checks
 
 - [ ] Open the download URL in a clean/incognito browser; verify HTTP download starts and completes.
-- [ ] Record the local ZIP's exact **Size** (not "Size on disk") and SHA-256.
-- [ ] Download a fresh copy from the hosted URL and compare SHA-256 against the local original.
+- [x] Record SHA-256; precise archive **Size** (as distinct from "Size on disk") should still be reconfirmed.
+- [x] Owner downloaded a separate copy from the hosted URL and confirmed SHA-256 matches the local original (reported 2026-11-10).
 - [ ] Run `powershell -ExecutionPolicy Bypass -File scripts\verify_portable_zip.ps1 -ZipPath "C:\Path\CacheNorth-v1.0.3-Full-Portable.zip" -InventoryPath "C:\Path\cache-north-zip-inventory.csv"`.
 - [ ] Extract on a clean test machine, confirm no nested extra folder breaks the launcher, and test all contents.
 - [ ] Publish SHA-256 beside the release URL and retain a dated immutable backup.
 
-**Verified local archive SHA-256:** `PENDING` (never invent a checksum).
+**Matched local + downloaded ZIP SHA-256:** `486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17` (owner-reported).
 
 ## 2. File-by-file redistribution register
 
