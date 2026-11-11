@@ -12,7 +12,7 @@ CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat w
 
 | Package | What you get | Status |
 |---|---|---|
-| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **16.9 GiB (18,183,434,240 bytes)** | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
+| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
 | **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
 **For early-access testing:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
@@ -62,7 +62,7 @@ The original local ZIP and a separate copy downloaded from `downloads.samsonschm
 486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17
 ```
 
-On Windows PowerShell, check your copy with `Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3-Full-Portable.zip" -Algorithm SHA256`. Match it against [SHA256SUMS.txt](SHA256SUMS.txt). **This verifies delivery integrity, not the package's security or third-party redistribution permissions.**
+On Windows PowerShell, check your copy with `Get-FileHash "C:\Path\To\CacheNorth-v1.0.3-Full-Portable.zip" -Algorithm SHA256`. Match it against [SHA256SUMS.txt](SHA256SUMS.txt). **This verifies delivery integrity, not the package's security or third-party redistribution permissions.**
 
 ## Pick your offline content
 
@@ -77,7 +77,7 @@ Each category has different file formats and licenses. **[Follow the customizati
 
 ## Preview the interface
 
-A real, privacy-reviewed screenshot of the Windows dashboard will be added before publication. **Do not substitute a mockup for a tested application screenshot.** The [Getting Started guide](docs/GETTING_STARTED.md) describes AI Chat, Knowledge Base, Maps, and Guides in the meantime.
+A real, privacy-reviewed screenshot of the Windows dashboard is still needed. Until then, the [Getting Started guide](docs/GETTING_STARTED.md) explains what to expect in each section. Never publish a screenshot containing personal chats, machine information, or real document names.
 
 ## What it can do
 
@@ -102,7 +102,7 @@ The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth c
 
 ## Licensing and commercial use
 
-Original CacheNorth source and branding remain **all rights reserved**, with limited personal noncommercial early-access use of official builds. See [LICENSE](LICENSE). Third-party applications, models, archives, maps, and PDFs have independent licenses and permissions; review the [bundled content register](docs/CONTENT_LICENSES.md). The iFixit archive carries CC BY-NC-SA terms; future paid bundling requires a separate commercial review or permission from iFixit.
+Original CacheNorth source and branding remain **all rights reserved**, with limited personal noncommercial early-access use of official builds. See [LICENSE](LICENSE) and [Contributing](CONTRIBUTING.md) for source permissions. Third-party applications, models, archives, maps, and PDFs have independent licenses and permissions; review the [bundled content register](docs/CONTENT_LICENSES.md) and [redistribution matrix](docs/REDISTRIBUTION_MATRIX.md). The iFixit archive carries CC BY-NC-SA terms; future paid bundling requires a separate commercial review or permission from iFixit.
 
 ## Important notes
 
@@ -114,7 +114,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. The compiled binary and complete USB package still require separate release approval.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not change the hosted v1.0.3 ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The compiled binary and complete USB package still require separate release approval.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 
