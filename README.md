@@ -23,7 +23,7 @@ CacheNorth is a portable toolkit you can put on a USB drive or use from a Window
 
 ### [Download CacheNorth v1.0.3.1 — Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
 
-**ZIP size:** 15,993,029,771 bytes (about 14.9 GiB). The download link uses the official Cloudflare domain; the uploaded copy's hash still needs independent confirmation.
+**ZIP size:** 15,993,029,771 bytes (about 14.9 GiB).
 
 **SHA-256 checksum:**
 ```text
