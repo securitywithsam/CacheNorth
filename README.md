@@ -13,11 +13,20 @@ CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat w
 | Package | What you get | Status |
 |---|---|---|
 | **Full Portable USB ZIP** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; current candidate is **16.9 GiB (18,183,434,240 bytes)** | **Coming soon** — verified download link will be added here after release checks and hosting setup |
-| **Source project** | Application code, tests, build scripts and documentation | In review on this private repository; for developers |
+| **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
 **When released:** download the Full Portable ZIP → extract it to a writable USB drive or a folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
 
 **Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
+
+### Quick setup (when the verified ZIP is released)
+
+1. Download **Full Portable USB ZIP** from the official link above; **Code → Download ZIP** is source only.
+2. Extract the ZIP, then copy its contents to a writable USB 3 drive (32 GB or larger recommended for the complete bundle). Keep the folder structure intact.
+3. Double-click **`Launch CacheNorth.exe`**, wait for the local dashboard, and explore the four libraries.
+4. To personalize it, copy `.gguf`, `.zim`, Mapsforge `.map`, or PDF files into the folders below and choose **Refresh All**.
+
+**First run checklist:** Confirm AI Chat responds, open one knowledge archive, view a map and PDF, then repeat the test with Wi-Fi disconnected. Exit CacheNorth and any external viewers before ejecting.
 
 ### Start here
 
@@ -56,6 +65,10 @@ You can keep optional folders empty or fill them with content relevant to you. A
 
 Each category has different file formats and licenses. **[Follow the customization guide](docs/CUSTOMIZE_YOUR_USB.md)** for the correct folders and steps. Downloads require internet upfront; the finished toolkit is designed for offline use.
 
+## Preview the interface
+
+A real, privacy-reviewed screenshot of the Windows dashboard will be added before publication. **Do not substitute a mockup for a tested application screenshot.** The [Getting Started guide](docs/GETTING_STARTED.md) describes AI Chat, Knowledge Base, Maps, and Guides in the meantime.
+
 ## What it can do
 
 - **Private AI chat:** local GGUF models using KoboldCpp, with CPU-first startup and optional experimental Vulkan GPU acceleration.
@@ -87,7 +100,7 @@ The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth c
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source import is being reviewed separately from any compiled binary or full USB release.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. The compiled binary and complete USB package still require separate release approval.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 
