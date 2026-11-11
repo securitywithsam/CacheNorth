@@ -28,7 +28,7 @@ body:
       label: Related CacheNorth section
       options:
         - AI chat and models
-        - Knowledge Base
+        - Knowledge Library
         - Offline maps
         - PDF guides and documents
         - Setup and USB portability
