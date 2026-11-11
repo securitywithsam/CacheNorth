@@ -1,3 +1,5 @@
+> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+
 # Third-party components and licenses
 
 This inventory separates Security With Sam's original work from third-party projects. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The owner-supplied full ZIP inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
