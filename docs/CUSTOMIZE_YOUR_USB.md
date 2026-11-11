@@ -1,8 +1,12 @@
+> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+
 # Customize your CacheNorth USB
 
 **Make your offline USB useful for you.** Pick your AI model, favorite offline knowledge, local maps, and reference guides. Copy each file into the matching folder, then refresh CacheNorth.
 
 > **Full portable USB download:** [CacheNorth-v1.0.3-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is now hosted, but the 16.9 GiB archive has a matching hosted-download SHA-256, but licensing, privacy, and hardware acceptance checks remain open. Use it only for private testing until cleared. GitHub's **Code → Download ZIP** downloads source code.
+
+**Model compatibility:** CacheNorth v1.0.3.x currently supports Qwen-family GGUF models only; an arbitrary GGUF from another model family may be marked unsupported. The cleaned package includes three verified Qwen models.
 
 ## Start in three steps
 
