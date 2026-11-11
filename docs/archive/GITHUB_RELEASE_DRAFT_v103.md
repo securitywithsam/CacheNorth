@@ -1,3 +1,5 @@
+> Historical planning document archived November 2026. For the current package consult [v1.0.3.1 release notes](../V1031_RELEASE_CANDIDATE.md) and [current release checklist](../FULL_PORTABLE_RELEASE_CHECKLIST.md).
+
 # GitHub prerelease draft — CacheNorth v1.0.3
 
 **Do not publish this draft or change repository visibility without the owner's separate approval.**
