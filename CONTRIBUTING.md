@@ -2,24 +2,31 @@
 
 Thanks for helping improve portable offline computing.
 
-## Before contributing
+## Current project status and permissions
 
-1. Check for an existing issue describing the same bug or idea.
-2. Open an issue before large architecture or packaging changes.
-3. Keep modifications scoped, explain the behavior, and add regression tests when practical.
-4. Respect the repository's eventual license and all third-party notices.
+CacheNorth's **original code is proprietary** under [LICENSE](LICENSE). Viewing source and running an official unmodified build for personal, noncommercial evaluation does **not** automatically authorize redistribution or publication of modified builds.
 
-## Bug reports
+You are welcome to report issues, suggest features, and provide feedback. **Ask the maintainer before submitting a source-code contribution or publishing a fork.** The maintainer can discuss permission for a specific contribution. Do not assume the repo is open source.
 
-Please provide the CacheNorth version, Windows version, CPU/RAM/GPU, mode (CPU/automatic/manual GPU), model filename or family, expected result, actual result, and steps to reproduce. Redact usernames, chat content, API tokens, session URLs, and personal document paths from logs.
+If a contribution is accepted, the contributor must have the rights to submit it and agree on its incorporation into CacheNorth, including any future commercial edition. Such terms must be agreed in writing before merging substantial outside code. Third-party material retains its own licenses, and these instructions do not limit rights granted by those licensors.
 
-## Development workflow
+## Before reporting an issue
 
-- Work in a branch and submit a pull request.
-- Keep USB drives and personal data out of tests; use temporary fixtures.
-- Test packaged application behavior as well as Python source behavior, especially for CPU detection, native launch, shutdown, and file paths.
+1. Check for an existing report about the problem.
+2. Include CacheNorth version (for example v1.0.3), Windows build, CPU/RAM/GPU, AI model, acceleration mode, expected and observed results, and reproduction steps.
+3. Say whether the problem occurs in the **hosted portable ZIP** or a **source build**; these may differ.
+4. Remove usernames, local paths, chats, documents, session URLs, tokens, passwords, cookies, and browser-profile data from logs and screenshots. Do not upload the entire USB or browser profile.
+
+Use [Security](SECURITY.md) for private reporting of vulnerabilities.
+
+## Development and testing guidance (for authorized contributors)
+
+- Coordinate scope before modifying application source.
+- Keep personal USB drives and third-party content out of tests; use temporary fixtures.
 - Preserve drive-letter independence and paths containing spaces.
-- Include before/after evidence for performance and temp-storage changes.
-- Do not include model weights, ZIM archives, map datasets, third-party binaries, or private data unless redistribution rights are established and approved.
+- Add regression tests and record Windows behavior when practical.
+- Test the packaged application separately from Python source; passing CI does not prove full-ZIP compatibility.
+- Never commit model weights, ZIMs, maps, binaries, personal data, or content without approved redistribution rights.
+- See [Building](docs/BUILDING.md), [Release readiness](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md), and [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md).
 
-Exact local build and test commands will be added after reviewing the final source repository.
+**The GitHub repository is private during early-access preparation.** Release and visibility decisions belong to the maintainer.
