@@ -6,20 +6,22 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3 free early-access candidate.** The full portable package is hosted and its download matches the maintainer's original ZIP by SHA-256; **remaining content/redistribution and privacy checks are documented below**. The repository is private while security, licensing, and compatibility checks are completed. Original CacheNorth code is **proprietary with limited personal early-access permission**; third-party software and content retain their own licenses. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
+> **Release status: v1.0.3.1 package preparation.** A cleaned portable build has passed the maintainer's 19 functional tests; further hardware and redistribution checks remain. The existing v1.0.3 URL below is the **original archived package**, not the cleaned build. See [v1.0.3.1 package notes](docs/V1031_RELEASE_CANDIDATE.md). Original CacheNorth code retains its limited proprietary early-access license; third-party components retain their own licenses.
 
 ## Download CacheNorth
 
+**New cleaned v1.0.3.1 download: pending upload and checksum.** Please wait for the verified link before treating it as the current package. The existing link below points to the original v1.0.3 archive.
+
 | Package | What you get | Status |
 |---|---|---|
-| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
+| **[Original v1.0.3 ZIP (historical)](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
 | **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
-**For early-access testing:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
+**For the original v1.0.3 archive only:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
 
 **Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
 
-### Quick setup — free early-access candidate
+### Quick setup — original package (new archive pending)
 
 1. Download **Full Portable USB ZIP** from the official link above; **Code → Download ZIP** is source only.
 2. Extract the ZIP to a writable USB 3 drive (32 GB or larger recommended for the complete bundle) or a normal folder. **Open the resulting `CacheNorth-v1.0.3-Full-Portable` folder**; keep its contents together.
@@ -66,6 +68,8 @@ On Windows PowerShell, check your copy with `Get-FileHash "C:\Path\To\CacheNorth
 
 ## Pick your offline content
 
+**Bundled cleaned package:** Qwen3 1.7B, Qwen3 4B and Qwen3.5 4B have been checked against official published hashes. The model manager currently supports Qwen-family GGUFs only.
+
 | Category | Good starting point | Source |
 |---|---|---|
 | **AI** | Qwen3 1.7B for lighter computers, or Qwen3 4B for 16 GB+ RAM | [Official Qwen GGUF models](https://huggingface.co/Qwen) |
@@ -77,7 +81,7 @@ Each category has different file formats and licenses. **[Follow the customizati
 
 ## Preview the interface
 
-A real, privacy-reviewed screenshot of the Windows dashboard is still needed. Until then, the [Getting Started guide](docs/GETTING_STARTED.md) explains what to expect in each section. Never publish a screenshot containing personal chats, machine information, or real document names.
+The cleaned package includes privacy-reviewed screenshots in its Quick Start and Troubleshooting PDFs; an optional repository README preview is still pending. Until then, the [Getting Started guide](docs/GETTING_STARTED.md) explains what to expect in each section. Never publish a screenshot containing personal chats, machine information, or real document names.
 
 ## What it can do
 
