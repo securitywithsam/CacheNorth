@@ -20,7 +20,7 @@
 
 ## 2. File-by-file redistribution register
 
-See [CONTENT_LICENSES.md](CONTENT_LICENSES.md) for the actual seven ZIMs, three model files, four map files, ten PDFs, optional portable installers, and iFixit's noncommercial/commercial requirements.
+See [CONTENT_LICENSES.md](../CONTENT_LICENSES.md) for the actual seven ZIMs, three model files, four map files, ten PDFs, optional portable installers, and iFixit's noncommercial/commercial requirements.
 
 For each redistributed binary, model, ZIM, map and PDF, record the exact archive-relative path, publisher, source/version, local SHA-256, license, attribution requirements, and permission to redistribute. Use this table as the starting point:
 
@@ -35,7 +35,7 @@ For each redistributed binary, model, ZIM, map and PDF, record the exact archive
 | Mapsforge maps | [Mapsforge](https://download.mapsforge.org/maps/v5/) | Source terms and OSM attribution | Verify map source; display **© OpenStreetMap contributors** in app |
 | PDF guides | Actual publisher of each document | Verify rights per PDF and embedded content | Keep own/cleared PDFs; exclude uncertain files |
 
-The existence of a public download does **not** grant permission to republish it inside CacheNorth. See [third-party review](THIRD_PARTY_LICENSES.md) and [release blockers](https://github.com/securitywithsam/CacheNorth/issues/4).
+The existence of a public download does **not** grant permission to republish it inside CacheNorth. See [third-party review](../THIRD_PARTY_LICENSES.md) and [release blockers](https://github.com/securitywithsam/CacheNorth/issues/4).
 
 ## 3. Windows physical smoke-test matrix
 
@@ -62,7 +62,7 @@ Never disable Windows security policies to make tests pass. Document blocked com
 
 ## Source-versus-package boundary
 
-Source-only documentation and CI changes on `main` do not alter the existing Cloudflare-hosted v1.0.3 ZIP. Use [Source vs. Hosted ZIP](SOURCE_VS_HOSTED_ZIP.md) to track what still needs a future binary release. The source's newest fixes, notices, and proposed attribution must **not** be presented as features already included in the uploaded archive.
+Source-only documentation and CI changes on `main` do not alter the existing Cloudflare-hosted v1.0.3 ZIP. Use [Source vs. Hosted ZIP](../SOURCE_VS_HOSTED_ZIP.md) to track what still needs a future binary release. The source's newest fixes, notices, and proposed attribution must **not** be presented as features already included in the uploaded archive.
 
 ## Final approval
 
