@@ -2,3 +2,5 @@
 # Hash confirmed by owner for original local ZIP and independent copy downloaded from downloads.samsonschmidt.com.
 # A matching hash proves byte-for-byte identity, not safety, licensing clearance or cross-PC compatibility.
 486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17  CacheNorth-v1.0.3-Full-Portable.zip
+# v1.0.3.1: owner-reported local ZIP SHA-256 (15,993,029,771 compressed bytes); hosted copy not independently verified yet.
+4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED  CacheNorth-v1.0.3.1-Full-Portable.zip
