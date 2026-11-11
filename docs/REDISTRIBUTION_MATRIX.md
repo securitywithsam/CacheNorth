@@ -1,3 +1,5 @@
+> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+
 # Bundled content redistribution decision matrix
 
 **Status:** Preliminary; based on the maintainer's filename-level package inventory and repository documentation. **Not a legal clearance or a verification of the 16.9 GiB ZIP's internal notices.** See [Content Licenses](CONTENT_LICENSES.md) and [Third-party Licenses](THIRD_PARTY_LICENSES.md) for detail.
