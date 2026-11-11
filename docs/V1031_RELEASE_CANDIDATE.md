@@ -1,10 +1,18 @@
 # CacheNorth v1.0.3.1 — portable release candidate
 
-**Status: prepared locally; new hosted ZIP URL, compressed size, and SHA-256 pending.** This repository remains private. The existing [v1.0.3 ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is the original historical artifact, with [its own checksum](../SHA256SUMS.txt); it has **not** been replaced by editing this repository.
+**Status: owner-reported ZIP metadata available; hosted URL/bytes not yet independently verified.** This repository remains private. The existing [v1.0.3 ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is the original historical artifact, with [its own checksum](../SHA256SUMS.txt); it has **not** been replaced by editing this repository.
+
+## New ZIP details (pending hosted verification)
+
+- Expected Cloudflare download: [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
+- Exact ZIP length: **15,993,029,771 bytes**
+- SHA-256 of owner's local compressed file: `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`
+- Windows verification: `Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3.1-Full-Portable.zip" -Algorithm SHA256`
+- **Verification status:** The custom-domain URL is inferred from the established naming scheme; an independent download/hash check is outstanding.
 
 ## What changed compared with the original v1.0.3 package
 
-This is a packaging, documentation, content-rights and privacy cleanup. **The application binaries and AI behavior were not rebuilt or changed.** The maintainer's clean folder contains 2,933 files totaling **17,300,263,255 bytes uncompressed** (decimal GB: 17.30; GiB: about 16.11). This is **not** the ZIP's final compressed size.
+This is a packaging, documentation, content-rights and privacy cleanup. **The application binaries and AI behavior were not rebuilt or changed.** The maintainer's clean folder contains 2,933 files totaling **17,300,263,255 bytes uncompressed** (decimal GB: 17.30; GiB: about 16.11). This is **not** the ZIP's compressed size, which is recorded above.
 
 - Removed generated browser/WebView2 state, chat and search databases, session data, logs and local test artifacts. The cleaned `Data` folder contains default settings and four empty directories.
 - Removed the Cloudflare and MedlinePlus ZIM archives and two PDFs without established complete redistribution rights: *Map and Compass* and the NWS spotter guide with third-party photographs.

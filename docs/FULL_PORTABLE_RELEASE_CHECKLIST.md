@@ -1,6 +1,6 @@
 # CacheNorth v1.0.3.1 — release checklist
 
-**Current status:** cleaned application folder tested; ZIP upload, checksum and redistribution questions pending. The [original v1.0.3 ZIP and hash](../SHA256SUMS.txt) are historical. See [release candidate details](V1031_RELEASE_CANDIDATE.md).
+**Current status:** cleaned application tested. Owner reports ZIP `CacheNorth-v1.0.3.1-Full-Portable.zip`, 15,993,029,771 compressed bytes and SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. Hosted availability/integrity and rights questions remain pending. The [original v1.0.3 ZIP and hash](../SHA256SUMS.txt) are historical. See [release candidate details](V1031_RELEASE_CANDIDATE.md).
 
 ## Before updating the download link
 
@@ -14,7 +14,8 @@
 - [ ] Resolve exact Chromium/Electron LGPL/MPL source availability and relinking obligations.
 - [ ] Add a public licensing/support contact.
 - [ ] ZIP **only the application folder**, excluding private `_work`; preserve four empty `Data` folders.
-- [ ] Record new ZIP filename, compressed file length and SHA-256; extract a sample and verify it launches.
+- [x] Record owner-reported new ZIP filename, compressed file length and SHA-256.
+- [ ] Extract a sample of the finished ZIP and verify it launches.
 - [ ] Upload to Cloudflare using a **new filename**; verify link and a downloaded-copy SHA-256.
 - [ ] Update README and [SHA256SUMS.txt](../SHA256SUMS.txt) with the new verified artifact while preserving original checksum.
 - [ ] Make GitHub public only if the owner explicitly authorizes that separate step.
