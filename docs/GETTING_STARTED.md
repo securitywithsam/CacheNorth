@@ -1,10 +1,10 @@
-> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+> **v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
 
 # Getting started with CacheNorth
 
 **Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
 
- > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), and its SHA-256 matched a separately downloaded copy; content rights, privacy and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
+ > **Download status:** The [v1.0.3.1 cleaned ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) is the intended current package (owner-reported local size and SHA-256 above). The link and hosted bytes need independent verification; rights and cross-PC checks remain open.
 
 ## Which path should I follow?
 
@@ -19,7 +19,7 @@
 ## The easy USB setup (hosted preview)
 
 1. Download the **Full Portable ZIP** with a matching hosted-copy SHA-256 from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
-2. Extract it to a writable USB drive or folder. **Open the extracted `CacheNorth-v1.0.3-Full-Portable` folder** and keep its contents together.
+2. Extract it to a writable USB drive or folder. **Open the extracted `CacheNorth-v1.0.3.1-Full-Portable` folder** and keep its contents together.
 3. Inside that folder, double-click `Launch CacheNorth.exe`.
 4. Explore **AI Chat**, **Knowledge Base**, **Maps**, and **Guides**. CacheNorth is designed to work offline after its resources have been downloaded.
 5. Want to add your own files? Open [Customize Your USB](CUSTOMIZE_YOUR_USB.md), copy files into the indicated folders, and choose **Refresh All**.
