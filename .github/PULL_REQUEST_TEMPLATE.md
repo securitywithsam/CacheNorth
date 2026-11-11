@@ -1,15 +1,21 @@
 ## Summary
 
-<!-- What does this change do? -->
+Describe the documentation change and why it helps readers.
+
+## Scope
+
+- [ ] Documentation, issue/PR template, or repository organization only
+- [ ] No application source, tests, CI behavior, build scripts, or third-party manifest changed
+- [ ] Proprietary LICENSE terms preserved
+- [ ] No personal data, secrets, private paths, model files, or unapproved third-party content introduced
 
 ## Verification
 
-- [ ] Relevant automated tests passed
-- [ ] Packaged runtime tested if behavior depends on packaging/Windows
-- [ ] Drive-letter and paths-with-spaces behavior considered
-- [ ] No private data, secrets, model weights, or unapproved third-party content added
-- [ ] Documentation and third-party notices updated if needed
+- [ ] New and moved Markdown links and anchors checked
+- [ ] External links checked where possible
+- [ ] CacheNorth v1.0.3.1 facts and dashboard labels are consistent
+- [ ] Rights and compatibility limitations preserved accurately
 
-## Evidence / known limitations
+## Evidence / needs owner confirmation
 
-<!-- Commands, results, screenshots without personal information -->
+List any unverifiable source facts or legal questions. Keep sensitive data out of the PR.
