@@ -2,11 +2,11 @@
 
 **Make your offline USB useful for you.** Pick your AI model, favorite offline knowledge, local maps, and reference guides. Copy each file into the matching folder, then refresh CacheNorth.
 
-> **Full portable USB download:** `CacheNorth-v1.0.3-Full-Portable.zip` is being prepared and has **not** been published yet. When the verified download is ready, its link will appear at the top of the [main page](../README.md). GitHub's green **Code → Download ZIP** downloads source code, **not** a ready-to-run CacheNorth USB.
+> **Full portable USB download:** [CacheNorth-v1.0.3-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is now hosted, but the 16.9 GiB archive has not finished integrity, licensing, and hardware acceptance checks. Use it only for private testing until cleared. GitHub's **Code → Download ZIP** downloads source code.
 
 ## Start in three steps
 
-1. **Get CacheNorth.** When the full ZIP is released, download it, extract it to a USB drive (or a normal folder), and open `Launch CacheNorth.exe`. Until then, see [Build from source](BUILDING.md) if you want to test the source preview.
+1. **Get CacheNorth.** For private testing, download the hosted ZIP, extract it to a USB drive (or a normal folder), and open `Launch CacheNorth.exe`. Until then, see [Build from source](BUILDING.md) if you want to test the source preview.
 2. **Choose what you want offline.** Use the links below to download an AI model, knowledge archives, maps, or PDFs **while you have internet**.
 3. **Copy files into the folders shown below.** In CacheNorth, choose **Refresh All** to update your libraries. For document search, use **Refresh Documents** or the add-documents control.
 
