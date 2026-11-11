@@ -1,12 +1,10 @@
-> **v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
-
 # Customize your CacheNorth USB
 
 **Make your offline USB useful for you.** Pick your AI model, favorite offline knowledge, local maps, and reference guides. Copy each file into the matching folder, then refresh CacheNorth.
 
 > **Full portable USB download:** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip); checksum and size provided by the owner, hosted download verification pending. GitHub's **Code → Download ZIP** is source code only.
 
-**Model compatibility:** CacheNorth v1.0.3.x currently supports Qwen-family GGUF models only; an arbitrary GGUF from another model family may be marked unsupported. The cleaned package includes three verified Qwen models.
+**Model compatibility:** CacheNorth v1.0.3.x currently supports Qwen-family GGUF models only; an arbitrary GGUF from another model family may be marked unsupported. The package includes three verified Qwen models.
 
 ## Start in three steps
 
