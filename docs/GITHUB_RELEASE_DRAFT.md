@@ -28,7 +28,7 @@ SHA-256 (original and independently downloaded copy matched):
 
 1. Download and extract the ZIP to a writable USB 3 drive or normal folder. Use a drive with at least 32 GB capacity for the full package.
 2. Open the extracted `CacheNorth-v1.0.3-Full-Portable` folder, then double-click `Launch CacheNorth.exe`.
-3. Use AI Chat, Knowledge Base, Offline Maps and Guides. See the [Getting Started](docs/GETTING_STARTED.md) and [Customize Your USB](docs/CUSTOMIZE_YOUR_USB.md) guides to personalize the content.
+3. Use AI Chat, Knowledge Base, Offline Maps and Guides. See the [Getting Started](https://github.com/securitywithsam/CacheNorth/blob/main/docs/GETTING_STARTED.md) and [Customize Your USB](https://github.com/securitywithsam/CacheNorth/blob/main/docs/CUSTOMIZE_YOUR_USB.md) guides to personalize the content.
 
 ### Requirements
 
@@ -36,11 +36,11 @@ Windows 10/11, 64-bit; recent x64 CPU preferred; 8 GB RAM is a target but not br
 
 ### Early-access limitations
 
-This is an experimental early-access build, with varying performance and hardware compatibility. AI answers can be wrong. Offline reference content can become outdated. The ZIP contains bundled third-party components/content with their own licenses, plus generated runtime files; review [licensing](docs/CONTENT_LICENSES.md), [privacy/security](SECURITY.md), and [release acceptance](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md). This early-access distribution is not a warranty of fitness for safety-critical use.
+This is an experimental early-access build, with varying performance and hardware compatibility. AI answers can be wrong. Offline reference content can become outdated. The ZIP contains bundled third-party components/content with their own licenses, plus generated runtime files; review [licensing](https://github.com/securitywithsam/CacheNorth/blob/main/docs/CONTENT_LICENSES.md), [privacy/security](https://github.com/securitywithsam/CacheNorth/blob/main/SECURITY.md), and [release acceptance](https://github.com/securitywithsam/CacheNorth/blob/main/docs/FULL_PORTABLE_RELEASE_CHECKLIST.md). This early-access distribution is not a warranty of fitness for safety-critical use.
 
 ### Feedback
 
-Please use GitHub Issues for bugs and feature requests, and remove personal information from any logs or screenshots. Use the private security-reporting instructions in [SECURITY.md](SECURITY.md) for vulnerabilities.
+Please use GitHub Issues for bugs and feature requests, and remove personal information from any logs or screenshots. Use the private security-reporting instructions in [SECURITY.md](https://github.com/securitywithsam/CacheNorth/blob/main/SECURITY.md) for vulnerabilities.
 
 ---
 
@@ -48,6 +48,6 @@ Please use GitHub Issues for bugs and feature requests, and remove personal info
 
 - [ ] Owner approves switching the repo to public.
 - [ ] Owner accepts or resolves outstanding redistribution/privacy notes in the full ZIP.
-- [ ] Verify GitHub release Markdown links resolve from the release page (relative links above may need absolute GitHub URLs).
+- [ ] Verify GitHub release links resolve from the release page after the repository is public.
 - [ ] Replace placeholders with reviewed dashboard screenshots.
 - [ ] Add final public announcement after changing repository visibility.
