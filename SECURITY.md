@@ -2,7 +2,9 @@
 
 ## Reporting a vulnerability
 
-Please report security problems privately through GitHub's **Report a vulnerability** button on this repository's Security tab (private vulnerability reporting), not in a public issue. Include the CacheNorth version, Windows version, and steps to reproduce. Do not include personal documents or conversations.
+Please report security problems privately to the maintainer through a secure channel. When the repository is public and GitHub private vulnerability reporting is enabled, use **Security → Report a vulnerability**. Do not post sensitive security details in a public issue. Include the CacheNorth version, Windows version, and steps to reproduce. Do not include personal documents or conversations.
+
+**Maintainer:** Confirm private vulnerability reporting is enabled before making the repository public.
 
 ## Security model
 
