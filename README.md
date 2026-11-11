@@ -6,23 +6,23 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3 preview.** The full portable package has been uploaded to the download host; **release verification is still in progress**. The repository is private while security, licensing, and compatibility checks are completed. Original CacheNorth code is **proprietary with limited personal early-access permission**; third-party software and content retain their own licenses. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
+> **Release status: v1.0.3 free early-access candidate.** The full portable package is hosted and its download matches the maintainer's original ZIP by SHA-256; **remaining content/redistribution and privacy checks are documented below**. The repository is private while security, licensing, and compatibility checks are completed. Original CacheNorth code is **proprietary with limited personal early-access permission**; third-party software and content retain their own licenses. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
 
 ## Download CacheNorth
 
 | Package | What you get | Status |
 |---|---|---|
-| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **16.9 GiB (18,183,434,240 bytes)** | **Hosted preview — integrity, licensing and hardware verification pending** |
+| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **16.9 GiB (18,183,434,240 bytes)** | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
 | **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
-**For private testing:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
+**For early-access testing:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
 
 **Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
 
-### Quick setup (when the verified ZIP is released)
+### Quick setup — free early-access candidate
 
 1. Download **Full Portable USB ZIP** from the official link above; **Code → Download ZIP** is source only.
-2. Extract the ZIP, then copy its contents to a writable USB 3 drive (32 GB or larger recommended for the complete bundle). Keep the folder structure intact.
+2. Extract the ZIP to a writable USB 3 drive (32 GB or larger recommended for the complete bundle) or a normal folder. **Open the resulting `CacheNorth-v1.0.3-Full-Portable` folder**; keep its contents together.
 3. Double-click **`Launch CacheNorth.exe`**, wait for the local dashboard, and explore the four libraries.
 4. To personalize it, copy `.gguf`, `.zim`, Mapsforge `.map`, or PDF files into the folders below and choose **Refresh All**.
 
@@ -52,7 +52,17 @@ The drive letter changes between computers. These are the paths **inside the Cac
 
 > **[See the complete illustrated USB folder map, exact steps, and official download links →](docs/CUSTOMIZE_YOUR_USB.md)**
 
-You can keep optional folders empty or fill them with content relevant to you. After copying files, open CacheNorth and use **Refresh All** (or **Refresh Documents** for document search). The full portable package, once released, is intended to remove the need to install developer tools.
+You can keep optional folders empty or fill them with content relevant to you. After copying files, open CacheNorth and use **Refresh All** (or **Refresh Documents** for document search). The hosted portable package is designed to avoid developer-tool installation.
+
+### Verify your download
+
+The original local ZIP and a separate copy downloaded from `downloads.samsonschmidt.com` produced the same SHA-256:
+
+```text
+486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17
+```
+
+On Windows PowerShell, check your copy with `Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3-Full-Portable.zip" -Algorithm SHA256`. Match it against [SHA256SUMS.txt](SHA256SUMS.txt). **This verifies delivery integrity, not the package's security or third-party redistribution permissions.**
 
 ## Pick your offline content
 
@@ -96,11 +106,11 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## Important notes
 
-- **Hosted archive is not yet release-cleared:** the link above was supplied by the maintainer, but this audit has not independently confirmed its HTTP response, SHA-256, contents, third-party redistribution rights, or hardware acceptance. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
+- **Early-access limitations:** the maintainer compared the local ZIP and a newly downloaded copy and found matching SHA-256 values. The complete archive still contains generated runtime data (including browser profile, logs and databases) and has unresolved per-item redistribution questions. These risks remain relevant even for a free release. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
 - **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
 - **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
 - **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
-- **Tested hardware:** the Windows 11 desktop build was tested on an AMD Ryzen 7 7800X3D/RTX 3080 machine. Intel laptop field logs cover earlier versions; v1.0.3 validation on that laptop, Windows 10, 8/16 GB devices, and managed PCs remains pending.
+- **Tested hardware:** the Windows 11 desktop build was tested on an AMD Ryzen 7 7800X3D/RTX 3080 machine. An Intel laptop running Windows build 26200 successfully launched v1.0.3, loaded Qwen3.5 4B on CPU, and shut down. Broader feature testing, Windows 10, 8/16 GB devices and managed PCs remain pending.
 
 ## For developers
 
