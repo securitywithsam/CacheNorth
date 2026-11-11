@@ -115,7 +115,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not automatically change the hosted ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The cleaned package has been tested on one PC; it still requires a new hosted ZIP integrity record and remaining redistribution review.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not automatically change the hosted ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The package has been tested on one PC; it still requires a new hosted ZIP integrity record and remaining redistribution review.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 
