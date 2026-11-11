@@ -2,13 +2,13 @@
 
 **Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
 
- > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), but SHA-256 matched a separately downloaded copy; content rights, privacy and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
+ > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), and its SHA-256 matched a separately downloaded copy; content rights, privacy and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
 
 ## Which path should I follow?
 
 | What describes you? | Follow this |
 |---|---|
-| **I want a ready-made offline USB** | Use the **hosted Full Portable ZIP** link on the [main page](../README.md#download-cachenorth), noting its verification-pending status, then follow the steps below |
+| **I want a ready-made offline USB** | Use the **hosted Full Portable ZIP** link on the [main page](../README.md#download-cachenorth), noting that licensing, privacy, and hardware acceptance checks remain open, then follow the steps below |
 | **I have CacheNorth already and want to customize it** | [Customize Your USB — visual folder map and links](CUSTOMIZE_YOUR_USB.md) |
 | **I want to find AI models, Wikipedia, maps or PDF guides** | [Content Sources](CONTENT_SOURCES.md) |
 | **I want to build the Windows app from source today** | [Build from Source](BUILDING.md), then [Installation](INSTALLATION.md) |
@@ -16,7 +16,7 @@
 
 ## The easy USB setup (hosted preview)
 
-1. Download the verified **Full Portable ZIP** from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
+1. Download the **Full Portable ZIP** with a matching hosted-copy SHA-256 from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
 2. Extract it to a writable USB drive or folder. **Open the extracted `CacheNorth-v1.0.3-Full-Portable` folder** and keep its contents together.
 3. Inside that folder, double-click `Launch CacheNorth.exe`.
 4. Explore **AI Chat**, **Knowledge Base**, **Maps**, and **Guides**. CacheNorth is designed to work offline after its resources have been downloaded.
