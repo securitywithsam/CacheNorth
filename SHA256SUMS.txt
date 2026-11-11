@@ -1,0 +1,4 @@
+# CacheNorth v1.0.3 full portable ZIP
+# Hash confirmed by owner for original local ZIP and independent copy downloaded from downloads.samsonschmidt.com.
+# A matching hash proves byte-for-byte identity, not safety, licensing clearance or cross-PC compatibility.
+486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17  CacheNorth-v1.0.3-Full-Portable.zip

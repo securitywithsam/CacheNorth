@@ -70,8 +70,8 @@ The core app separately bundles KoboldCpp (AGPL and included vendor components),
 
 ## Release record
 
-- Existing uploaded ZIP SHA-256 (owner supplied): `486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17`
-- This is **not** a verified hosted-copy checksum or approval of the uploaded archive.
+- Existing uploaded ZIP SHA-256 (owner supplied, independently matched after re-download): `486824A6BE4B441417BAB6A4AF000FD5312A83602C99F03B7F9D754750791F17`
+- Owner reports an independent hosted download with an **identical SHA-256**. This verifies transfer integrity but is **not** approval of the archive's contents, privacy, or redistribution rights.
 - Updated, cleaned ZIP hash: **pending**.
 - iFixit commercial permission: **pending**.
 - Individually approved archive/PDF/installer register: **pending**.
