@@ -1,5 +1,10 @@
 # CacheNorth Release Notes
 
+## v1.0.3.1 — cleaned portable package (pending upload)
+
+Packaging/documentation update; application binaries and behavior unchanged. The maintainer reports 2,933 files, 17,300,263,255 bytes uncompressed; three validated Qwen models, five ZIMs, four maps, five guides; regenerated beginner PDFs; privacy cleanup; refreshed GPL/AGPL/LGPL source and attribution materials. All 19 functional tests on one Windows 11 PC passed, including CPU chat, documents, Kiwix, maps, guides, shutdown and alternate drive letter. Windows 10, 8 GB RAM, GPU and downloaded-ZIP SmartScreen acceptance remain untested. Rights/source-distribution review of Chromium/Electron and noncommercial iFixit content remains open. The original v1.0.3 download and checksum remain unchanged; the new compressed filename, byte length and SHA-256 await upload. See [candidate notes](V1031_RELEASE_CANDIDATE.md).
+
+
 ## Source distribution of 1.0.3 (2026-11)
 
 The application code is unchanged from the 1.0.3 build deployed for personal testing. This release prepares the source for GitHub:
