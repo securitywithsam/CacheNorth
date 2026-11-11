@@ -1,6 +1,6 @@
-# CacheNorth v1.0.3.1 — release checklist
+# CacheNorth v1.0.3.1 — maintainer release checklist
 
-**Current status:** application tested. Owner reports ZIP `CacheNorth-v1.0.3.1-Full-Portable.zip`, 15,993,029,771 compressed bytes and SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. Hosted availability/integrity and rights questions remain pending. The [current ZIP checksum](../SHA256SUMS.txt) is for v1.0.3.1. See [release candidate details](V1031_RELEASE_CANDIDATE.md).
+**Current status:** application tested. Owner reports ZIP `CacheNorth-v1.0.3.1-Full-Portable.zip`, 15,993,029,771 compressed bytes and SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. Hosted availability/integrity and rights questions remain pending. The [current ZIP checksum](../../SHA256SUMS.txt) is for v1.0.3.1. See [release candidate details](V1031_RELEASE_NOTES.md).
 
 ## Before updating the download link
 
@@ -16,7 +16,7 @@
 - [x] Record owner-reported new ZIP filename, compressed file length and SHA-256.
 - [ ] Extract a sample of the finished ZIP and verify it launches.
 - [ ] Upload to Cloudflare using a **new filename**; verify link and a downloaded-copy SHA-256.
-- [ ] Update README and [SHA256SUMS.txt](../SHA256SUMS.txt) with the new verified artifact while preserving original checksum.
+- [ ] Update README and [SHA256SUMS.txt](../../SHA256SUMS.txt) with the new verified artifact while preserving original checksum.
 - [ ] Make GitHub public only if the owner explicitly authorizes that separate step.
 
 ## Recommended follow-up testing

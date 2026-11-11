@@ -1,14 +1,12 @@
-# Customize your CacheNorth USB
+# Add your own content
 
 **Make your offline USB useful for you.** Pick your AI model, favorite offline knowledge, local maps, and reference guides. Copy each file into the matching folder, then refresh CacheNorth.
-
-> **Full portable USB download:** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip); checksum and size provided by the owner, hosted download verification pending. GitHub's **Code → Download ZIP** is source code only.
 
 **Model compatibility:** CacheNorth v1.0.3.x currently supports Qwen-family GGUF models only; an arbitrary GGUF from another model family may be marked unsupported. The package includes three verified Qwen models.
 
 ## Start in three steps
 
-1. **Get CacheNorth.** For private testing, download the hosted ZIP, extract it to a USB drive (or normal folder), open the extracted `CacheNorth-v1.0.3.1-Full-Portable` folder, and double-click `Launch CacheNorth.exe`. For a separate developer workflow, see [Build from source](BUILDING.md).
+1. **Get CacheNorth.** Download the [Full Portable ZIP](../README.md#download), extract it to a USB drive (or normal folder), open the extracted `CacheNorth-v1.0.3.1-Full-Portable` folder, and double-click `Launch CacheNorth.exe`. For a separate developer workflow, see [Build from source](advanced/BUILDING.md).
 2. **Choose what you want offline.** Use the links below to download an AI model, knowledge archives, maps, or PDFs **while you have internet**.
 3. **Copy files into the folders shown below.** In CacheNorth, choose **Refresh All** to update your libraries. For document search, use **Refresh Documents** or the add-documents control.
 
@@ -37,22 +35,19 @@ E:\CacheNorth-v1.0.3.1-Full-Portable\  ← Open this extracted folder
 │   └── your-region.map
 ├── Guides\                                ← PDFs you want to browse
 │   └── your-guide.pdf
-├── Kiwix\                                 ← Optional ZIM reader
-│   ├── Kiwix-JS-Electron-<version>-E.exe       ← Current portable EXE option
-│   └── kiwix-js-pwa-win32-ia32\
-│       └── Kiwix JS Electron.exe              ← Legacy layout
-└── Start Here\                            ← Included help material (if present)
+├── Kiwix\                              ← Bundled offline archive viewer
+└── Start Here\                         ← Included help material
 ```
 
 The application also has other runtime files and folders. **Keep them in place.** Add your downloads to the existing folders; do not move `Launch CacheNorth.exe`, rename application directories, or put your GGUF files into the `Documents` folder.
 
 | What you want to add | File type | Copy it here | Where to use it |
 |---|---|---|---|
-| Offline AI model | `.gguf` | `Apps\Offline AI\Models` | **AI Chat / Settings → Models** |
-| Wikipedia, repair, medical or other Kiwix knowledge | `.zim` | `Library` | **Knowledge Base** |
-| Regional offline map | `.map` (Mapsforge) | `Maps` | **Maps** |
+| Offline AI model | `.gguf` | `Apps\Offline AI\Models` | **AI Chat / Settings → AI Model Manager** |
+| Wikipedia, repair, medical or other Kiwix knowledge | `.zim` | `Library` | **Knowledge Library** |
+| Regional offline map | `.map` (Mapsforge) | `Maps` | **Offline Maps** |
 | Reading guides | `.pdf` | `Guides` | **Guides** |
-| Your own searchable documents | `.pdf`, `.txt`, `.md` | `Apps\Offline AI\Data\Documents` | **Ask Documents** |
+| Your own searchable documents | `.pdf`, `.txt`, `.md` | `Apps\Offline AI\Data\Documents` | **Document Search** |
 
 ## 1. Choose your AI model
 
@@ -64,16 +59,15 @@ You need **at least one model** for offline AI chat. Download one `Q4_K_M` GGUF 
 | Qwen3 4B | 2.5 GB | More capable option; 16 GB+ RAM preferred | [Official Qwen GGUF](https://huggingface.co/Qwen/Qwen3-4B-GGUF/tree/main) |
 | Qwen3.5 4B | 2.7 GB | Alternative 4B model; 16 GB+ RAM preferred | [Unsloth GGUF](https://huggingface.co/unsloth/Qwen3.5-4B-GGUF) |
 
-**How:** Open the model page → **Files and versions** → select a compatible `Q4_K_M.gguf` file → download → place it in `Apps\Offline AI\Models`. Open CacheNorth and refresh/select the model in Settings. Available filenames and formats can change; verify the model's license and file details before downloading.
+**How:** Open the model page → **Files and versions** → select a compatible `Q4_K_M.gguf` file → download → place it in `Apps\Offline AI\Models`. Open CacheNorth, choose **Refresh All**, and select it in **Settings → AI Model Manager**. Available filenames and formats can change; verify the model's license and file details before downloading.
 
 ## 2. Add offline knowledge (.zim)
 
 A `.zim` is an offline library archive, used by [Kiwix](https://library.kiwix.org/). You can mix smaller, specialized collections with larger encyclopedias.
 
 - [Browse the Kiwix library](https://library.kiwix.org/) — search for **Simple English Wikipedia**, **Wiktionary**, **Wikivoyage**, and other topics.
-- [Kiwix JS portable Windows downloads](https://github.com/kiwix/kiwix-js-pwa/releases) — choose the **portable Windows 10/11 Electron `.exe`** asset (for example, `Kiwix-JS-Electron-3.9.3-E.exe`; version may change). Put it directly in `Kiwix\`. CacheNorth also recognizes the old `kiwix-js-pwa-win32-ia32\Kiwix JS Electron.exe` layout. Avoid installer, `.appx`, and XP/Vista legacy builds.
 
-**How:** Download the selected `.zim` file → put it in `Library` → choose **Refresh All** → open **Knowledge Base**. If an archive will not open, verify that the Kiwix viewer is present and that the path matches [Installation](INSTALLATION.md#6-add-offline-archives-optional).
+**How:** Download the selected `.zim` file → put it in `Library` → choose **Refresh All** → open **Knowledge Library**. Kiwix is bundled in the Full Portable ZIP. Install a separate viewer only if you are building CacheNorth from source.
 
 **Important:** Every ZIM collection has its own content rights. Downloading for personal offline reading does not automatically grant permission to repackage it into a public USB ZIP. Check the archive's license before sharing.
 
@@ -82,9 +76,8 @@ A `.zim` is an offline library archive, used by [Kiwix](https://library.kiwix.or
 - [Browse Mapsforge map downloads](https://download.mapsforge.org/maps/v5/) — select a continent, country, or region.
 - [United States state maps](https://download.mapsforge.org/maps/v5/north-america/us/) — pick the state you need.
 - [Minnesota map](https://download.mapsforge.org/maps/v5/north-america/us/minnesota.map) — example for Minnesota users.
-- [GPXSee map viewer](https://www.gpxsee.org/) — portable map viewer, needed if it is not already included.
 
-**How:** Download a compatible **Mapsforge `.map`** file → copy to `Maps` → choose **Refresh All** → open **Maps**. This feature uses Mapsforge maps, not arbitrary map images or GPX tracks. The viewer belongs at `Apps\GPXSee\GPXSee.exe`.
+**How:** Download a compatible **Mapsforge `.map`** file → copy to `Maps` → choose **Refresh All** → open **Offline Maps**. This feature uses Mapsforge maps, not arbitrary map images or GPX tracks. GPXSee is included in the Full Portable ZIP at `Apps\GPXSee\GPXSee.exe`.
 
 Map data is based on OpenStreetMap. Keep the attribution **© OpenStreetMap contributors** and [ODbL details](https://www.openstreetmap.org/copyright) with shared copies. These maps do not show live traffic or provide turn-by-turn navigation.
 
@@ -102,7 +95,7 @@ Prefer source pages and official PDFs that you can verify and update when needed
 
 **How:** Download a PDF you trust → copy it into `Guides` → choose **Refresh All** → open **Guides**.
 
-Want the AI to **search and cite** a document instead? Put a copy in `Apps\Offline AI\Data\Documents`, then refresh documents and use **Ask Documents**. PDFs made entirely of scanned images need OCR first.
+Want the AI to **search and cite** a document instead? Put a copy in `Apps\Offline AI\Data\Documents`, then refresh documents and use **Document Search**. PDFs made entirely of scanned images need OCR first.
 
 ## Make it personal: three example setups
 
@@ -118,14 +111,23 @@ These are examples, not fixed bundles. Choose content based on your drive's free
 
 1. Safely finish copying all downloads.
 2. Launch `Launch CacheNorth.exe`.
-3. Choose **Refresh All**; use **Refresh Documents** for Ask Documents.
+3. Choose **Refresh All**; use **Refresh Documents** for Document Search.
 4. Confirm the items appear in the corresponding sections.
 5. Test at least one AI prompt, one ZIM, one map, and one PDF **with Wi-Fi turned off**.
 6. Close CacheNorth and any viewers before safely ejecting the USB.
 
 ## Help and safe sharing
 
-- [Installation details](INSTALLATION.md) · [Content source notes](CONTENT_SOURCES.md) · [Troubleshooting](TROUBLESHOOTING.md)
-- Models, ZIMs, maps, and PDFs may have separate licensing or redistribution obligations. See [Third-party licensing](THIRD_PARTY_LICENSES.md).
+- [Getting Started](GETTING_STARTED.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Developer installation](advanced/INSTALLATION.md)
+- Models, ZIMs, maps, and PDFs may have separate licensing or redistribution obligations. See [Third-party licensing](legal/THIRD_PARTY_LICENSES.md).
 - Your chats, documents, indexes, and settings can contain private data. Do **not** publicly upload your personal USB copy.
 - Offline content can become outdated. Verify safety-critical medical, navigation, or emergency information with current authoritative sources.
+
+## More official starting points
+
+- [Qwen3 1.7B GGUF](https://huggingface.co/Qwen/Qwen3-1.7B-GGUF), [Qwen3 4B GGUF](https://huggingface.co/Qwen/Qwen3-4B-GGUF), [Unsloth Qwen3.5 4B GGUF](https://huggingface.co/unsloth/Qwen3.5-4B-GGUF)
+- [Kiwix offline archives](https://library.kiwix.org/)
+- [Mapsforge U.S. state maps](https://download.mapsforge.org/maps/v5/north-america/us/)
+- [Ready.gov](https://www.ready.gov/), [NOAA](https://www.noaa.gov/), [US Forest Service](https://www.fs.usda.gov/)
+
+**A newly added GGUF must be a supported Qwen-family model with a chat template.** Other architectures appear as **unsupported** in the AI Model Manager. The bundled three models are ready to use without downloading more.

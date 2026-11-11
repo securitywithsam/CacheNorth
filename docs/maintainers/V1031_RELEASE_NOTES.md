@@ -1,4 +1,4 @@
-# CacheNorth v1.0.3.1 — portable release candidate
+# CacheNorth v1.0.3.1 — maintainer release record
 
 **Status: owner-reported ZIP metadata available; hosted URL/bytes not yet independently verified.** This repository remains private. This document describes the current v1.0.3.1 package.
 
@@ -34,7 +34,7 @@ The maintainer reports **19/19 tests passed on one Windows 11 PC**, including na
 2. Record **exact ZIP filename, compressed byte length and SHA-256** from the finished archive, and check extraction and startup. Publish these values together with the new Cloudflare download link. Compare against the v1.0.3.1 checksum above.
 3. Resolve the applicable source-distribution obligations for bundled Chromium/Electron components, including the LGPL/MPL source availability/relinking questions.
 4. Confirm that distribution of the iFixit CC BY-NC-SA archive qualifies as noncommercial or obtain appropriate permission; remove the archive if neither condition is satisfied.
-5. Set a usable public licensing/contact address before broad distribution. Original CacheNorth code remains under its [limited proprietary early-access license](../LICENSE).
+5. Set a usable public licensing/contact address before broad distribution. Original CacheNorth code remains under its [limited proprietary early-access license](../../LICENSE).
 6. Perform a second-machine/USB smoke test where practical.
 
 These are engineering and rights-tracking notes, not a legal certification. Distribution for free does not itself establish noncommercial status under all content licenses.
@@ -43,4 +43,4 @@ These are engineering and rights-tracking notes, not a legal certification. Dist
 
 This page describes the **v1.0.3.1 package**, based on the maintainer's test report. Developer build instructions may describe optional components that are already bundled in the full portable download.
 
-For setup see [Getting Started](GETTING_STARTED.md), [Customization](CUSTOMIZE_YOUR_USB.md) and [Troubleshooting](TROUBLESHOOTING.md). For download differences, see [Source vs hosted ZIP](SOURCE_VS_HOSTED_ZIP.md).
+For setup see [Getting Started](../GETTING_STARTED.md), [Customization](../ADD_YOUR_CONTENT.md) and [Troubleshooting](../TROUBLESHOOTING.md). For download differences, see [Source vs hosted ZIP](../FAQ.md).

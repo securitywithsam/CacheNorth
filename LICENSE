@@ -14,7 +14,7 @@ This is **not an open-source license**. Publicly visible source, if made availab
 
 ## Third-party components and content
 
-The restrictions above **do not replace or limit** licenses granted directly by third-party copyright holders. KoboldCpp, Kiwix, GPXSee, model weights, maps, ZIM archives, PDFs, portable applications, and their libraries are governed by their own terms, which may permit copying, modification, and redistribution independently of this notice. See [Third-party licenses](docs/THIRD_PARTY_LICENSES.md) and [Content licenses](docs/CONTENT_LICENSES.md).
+The restrictions above **do not replace or limit** licenses granted directly by third-party copyright holders. KoboldCpp, Kiwix, GPXSee, model weights, maps, ZIM archives, PDFs, portable applications, and their libraries are governed by their own terms, which may permit copying, modification, and redistribution independently of this notice. See [Third-party licenses](docs/legal/THIRD_PARTY_LICENSES.md) and [Content licenses](docs/legal/THIRD_PARTY_LICENSES.md).
 
 The official full portable ZIP may include third-party material under GPL, AGPL, Apache, Creative Commons, ODbL, proprietary, or other terms. Consult each applicable notice and corresponding-source offer. This file is not a license for that material.
 

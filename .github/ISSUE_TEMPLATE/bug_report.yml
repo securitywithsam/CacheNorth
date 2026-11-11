@@ -14,7 +14,7 @@ body:
     attributes:
       label: CacheNorth version
       description: Include whether this is the hosted full portable ZIP or a build from current source.
-      placeholder: "v1.0.3 full portable ZIP"
+      placeholder: "v1.0.3.1 Full Portable ZIP"
     validations:
       required: true
   - type: input
@@ -31,9 +31,9 @@ body:
       options:
         - Startup or shutdown
         - AI chat or model selection
-        - Document search
-        - Knowledge Base or Kiwix
-        - Maps or GPXSee
+        - Document Search
+        - Knowledge Library or Kiwix
+        - Offline Maps or GPXSee
         - PDF guides
         - Settings or USB portability
         - Other

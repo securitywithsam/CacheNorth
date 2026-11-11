@@ -1,4 +1,4 @@
-# Dependency, content, and license review — pending
+# Dependency, content and license review (maintainer reference)
 
 **Status:** Engineering audit required before public release. This is a planning inventory, not a legal clearance or an assertion that every item is in the current final build.
 

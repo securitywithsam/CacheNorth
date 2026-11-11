@@ -53,4 +53,4 @@ To reset CacheNorth, close it and delete `settings.json`. To remove all conversa
 | Branding | `dashboard/cache-north-logo.png`, `dashboard/favicon.ico`, `launcher/CacheNorth.ico`, window title in `launcher/StartOfflineAI.cs` |
 | KoboldCpp version | `third_party/manifest.json` (URL, SHA-256, unpacked tree hash), then rerun `fetch_third_party.ps1` |
 
-After changes, run `scripts\test.ps1` and rebuild. If you redistribute a modified build, follow the third-party obligations in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) and do not present it as an official Security With Sam release.
+After changes, run `scripts\test.ps1` and rebuild. If you redistribute a modified build, follow the third-party obligations in [THIRD_PARTY_LICENSES.md](../legal/THIRD_PARTY_LICENSES.md) and do not present it as an official Security With Sam release.

@@ -56,7 +56,7 @@ Use **Document Search > Add documents**, or copy PDF, TXT, or Markdown files int
 2. Download `.zim` archives from https://library.kiwix.org and copy them into `Library\`.
 3. Choose **Refresh All**. Each archive shows on the Knowledge Library page.
 
-Check each archive's license before sharing a drive with others; some, such as iFixit (CC BY-NC-SA), forbid commercial use. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+Check each archive's license before sharing a drive with others; some, such as iFixit (CC BY-NC-SA), forbid commercial use. See [THIRD_PARTY_LICENSES.md](../legal/THIRD_PARTY_LICENSES.md).
 
 ## 7. Add offline maps (optional)
 
