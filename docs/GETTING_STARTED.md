@@ -2,19 +2,19 @@
 
 **Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
 
-> **Download status:** The full ready-to-run USB package, `CacheNorth-v1.0.3-Full-Portable.zip` (current candidate: **16.9 GiB**), is **coming soon**. It is undergoing release checks, and there is no public download link yet. The current GitHub project is a source preview.
+ > **Download status:** The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted (candidate: **16.9 GiB**), but integrity, content rights, and multi-PC release checks are still pending. Treat this as a **private testing preview**, not a fully approved public release.
 
 ## Which path should I follow?
 
 | What describes you? | Follow this |
 |---|---|
-| **I want a ready-made offline USB** | Wait for the **Full Portable ZIP** link on the [main page](../README.md#download-cachenorth), then follow the steps below |
+| **I want a ready-made offline USB** | Use the **hosted Full Portable ZIP** link on the [main page](../README.md#download-cachenorth), noting its verification-pending status, then follow the steps below |
 | **I have CacheNorth already and want to customize it** | [Customize Your USB — visual folder map and links](CUSTOMIZE_YOUR_USB.md) |
 | **I want to find AI models, Wikipedia, maps or PDF guides** | [Content Sources](CONTENT_SOURCES.md) |
 | **I want to build the Windows app from source today** | [Build from Source](BUILDING.md), then [Installation](INSTALLATION.md) |
 | **Something isn't working** | [Troubleshooting](TROUBLESHOOTING.md) |
 
-## The easy USB setup (once Full ZIP is released)
+## The easy USB setup (hosted preview)
 
 1. Download the verified **Full Portable ZIP** from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
 2. Extract it to a writable USB drive or folder. Keep the contents together and leave the existing paths unchanged.

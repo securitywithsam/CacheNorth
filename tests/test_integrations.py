@@ -61,3 +61,22 @@ def test_guides_are_discovered_with_friendly_titles_and_confined_open(monkeypatc
     assert opened == [(guides / found[0]["name"]).resolve()]
     with pytest.raises(FileNotFoundError):
         integration.open_guide("guides", "..\\outside.pdf")
+
+
+@pytest.mark.parametrize("relative_name", [
+    "Kiwix-JS-Electron-3.9.3-E.exe",
+    "Kiwix-JS-Electron.exe",
+    "Kiwix-JS-Electron-3.9.3-E/Kiwix JS Electron.exe",
+])
+def test_current_kiwix_portable_layouts_are_detected(kit_root: Path, relative_name: str):
+    executable = kit_root / "Kiwix" / relative_name
+    executable.parent.mkdir(parents=True, exist_ok=True)
+    executable.write_bytes(b"test")
+    assert Integrations(AppPaths.from_root(kit_root)).kiwix_executable() == executable
+
+
+def test_kiwix_ignores_unknown_executable(kit_root: Path):
+    executable = kit_root / "Kiwix" / "unrelated.exe"
+    executable.parent.mkdir(parents=True, exist_ok=True)
+    executable.write_bytes(b"test")
+    assert Integrations(AppPaths.from_root(kit_root)).kiwix_executable() is None

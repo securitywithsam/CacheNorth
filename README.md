@@ -6,18 +6,27 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3 preview.** The full portable package has been prepared but is **not publicly downloadable yet**. The repository is private while security, licensing, and compatibility checks are completed. The original CacheNorth code does not yet have a public license. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
+> **Release status: v1.0.3 preview.** The full portable package has been uploaded to the download host; **release verification is still in progress**. The repository is private while security, licensing, and compatibility checks are completed. The original CacheNorth code does not yet have a public license. See [release notes](docs/RELEASE_NOTES.md) and [third-party rights](docs/THIRD_PARTY_LICENSES.md).
 
 ## Download CacheNorth
 
 | Package | What you get | Status |
 |---|---|---|
-| **Full Portable USB ZIP** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; current candidate is **16.9 GiB (18,183,434,240 bytes)** | **Coming soon** — verified download link will be added here after release checks and hosting setup |
-| **Source project** | Application code, tests, build scripts and documentation | In review on this private repository; for developers |
+| **[Full Portable USB ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **16.9 GiB (18,183,434,240 bytes)** | **Hosted preview — integrity, licensing and hardware verification pending** |
+| **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
-**When released:** download the Full Portable ZIP → extract it to a writable USB drive or a folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
+**For private testing:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
 
 **Important:** GitHub's **Code → Download ZIP** contains the *source project*, not the ready-to-run Full Portable USB package. Do not mistake one for the other.
+
+### Quick setup (when the verified ZIP is released)
+
+1. Download **Full Portable USB ZIP** from the official link above; **Code → Download ZIP** is source only.
+2. Extract the ZIP, then copy its contents to a writable USB 3 drive (32 GB or larger recommended for the complete bundle). Keep the folder structure intact.
+3. Double-click **`Launch CacheNorth.exe`**, wait for the local dashboard, and explore the four libraries.
+4. To personalize it, copy `.gguf`, `.zim`, Mapsforge `.map`, or PDF files into the folders below and choose **Refresh All**.
+
+**First run checklist:** Confirm AI Chat responds, open one knowledge archive, view a map and PDF, then repeat the test with Wi-Fi disconnected. Exit CacheNorth and any external viewers before ejecting.
 
 ### Start here
 
@@ -56,6 +65,10 @@ You can keep optional folders empty or fill them with content relevant to you. A
 
 Each category has different file formats and licenses. **[Follow the customization guide](docs/CUSTOMIZE_YOUR_USB.md)** for the correct folders and steps. Downloads require internet upfront; the finished toolkit is designed for offline use.
 
+## Preview the interface
+
+A real, privacy-reviewed screenshot of the Windows dashboard will be added before publication. **Do not substitute a mockup for a tested application screenshot.** The [Getting Started guide](docs/GETTING_STARTED.md) describes AI Chat, Knowledge Base, Maps, and Guides in the meantime.
+
 ## What it can do
 
 - **Private AI chat:** local GGUF models using KoboldCpp, with CPU-first startup and optional experimental Vulkan GPU acceleration.
@@ -79,7 +92,7 @@ The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth c
 
 ## Important notes
 
-- **Public download still pending:** the prepared Full ZIP has not yet passed release distribution checks. A link will be posted above once cleared.
+- **Hosted archive is not yet release-cleared:** the link above was supplied by the maintainer, but this audit has not independently confirmed its HTTP response, SHA-256, contents, third-party redistribution rights, or hardware acceptance. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
 - **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
 - **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
 - **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
@@ -87,7 +100,7 @@ The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth c
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source import is being reviewed separately from any compiled binary or full USB release.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. The compiled binary and complete USB package still require separate release approval.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 

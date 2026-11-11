@@ -134,11 +134,30 @@ class Integrations:
         open_local_file(folder)
 
     def kiwix_executable(self) -> Path | None:
+        # Accept both the legacy v1.0.3 bundled layout and current portable Kiwix JS
+        # Electron releases. Restrict discovery to recognized executable names inside
+        # the kit's own Kiwix folder; never execute an arbitrary downloaded .exe.
         candidates = (
             self.paths.kiwix / "kiwix-js-pwa-win32-ia32" / "Kiwix JS Electron.exe",
             self.paths.kiwix / "kiwix-desktop.exe",
+            self.paths.kiwix / "Kiwix-JS-Electron.exe",
+            self.paths.kiwix / "Kiwix JS Electron.exe",
         )
-        return next((path for path in candidates if path.is_file()), None)
+        for candidate in candidates:
+            if candidate.is_file():
+                return candidate
+        if self.paths.kiwix.is_dir():
+            for pattern in ("Kiwix-JS-Electron-*.exe", "Kiwix-JS-Electron-*-E.exe"):
+                for candidate in sorted(self.paths.kiwix.glob(pattern)):
+                    if candidate.is_file():
+                        return candidate
+            for folder in sorted(self.paths.kiwix.iterdir()):
+                if folder.is_dir() and folder.name.lower().startswith(("kiwix-js-electron", "kiwix-js-pwa")):
+                    for filename in ("Kiwix JS Electron.exe", "Kiwix-JS-Electron.exe"):
+                        candidate = folder / filename
+                        if candidate.is_file():
+                            return candidate
+        return None
 
     def maps_executable(self) -> Path | None:
         candidates = (

@@ -12,7 +12,7 @@
 | [Ready.gov emergency PDFs](https://www.ready.gov/) | A useful `.pdf` guide | `Guides\` |
 | Your own documents | `.pdf`, `.txt`, `.md` | `Apps\Offline AI\Data\Documents\` |
 
-**Add files → open CacheNorth → Refresh All.** Use the documents refresh option for Ask Documents. The full ready-to-run ZIP download link will be posted on the [README](../README.md#download-cachenorth) after release clearance; it is not yet available.
+**Add files → open CacheNorth → Refresh All.** Use the documents refresh option for Ask Documents. The [full portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is hosted for private testing; archive integrity, licensing, and hardware acceptance remain pending. See the [README](../README.md#download-cachenorth).
 
 
 CacheNorth's source repository contains **no AI model weights, ZIM archives, map data, third-party viewers, or personal PDF collection**. You choose and download these separately. Some material can be used personally but has restrictions on redistribution; read the upstream license before copying it into a publicly shared image.
@@ -35,7 +35,7 @@ Do not download an entire model repository by default; some contain many differe
 
 CacheNorth lists .zim files and opens them through Kiwix when the Kiwix viewer is installed.
 
-1. Get a **Windows Kiwix JS Electron application** from [Kiwix JS releases](https://github.com/kiwix/kiwix-js-pwa/releases). Release asset names and packaging can change. Check the downloaded archive, then arrange the executable at the path in [the installation instructions](INSTALLATION.md#6-add-offline-archives-optional).
+1. Get the **portable Windows 10/11 Kiwix JS Electron `.exe`** from [Kiwix JS releases](https://github.com/kiwix/kiwix-js-pwa/releases), such as `Kiwix-JS-Electron-3.9.3-E.exe`. Place it in the USB's `Kiwix\` folder. Avoid the installer, `.appx`, and XP/Vista legacy ZIP options. Release names can change; see [installation instructions](INSTALLATION.md#6-add-offline-archives-optional).
 2. Browse the [Kiwix library](https://library.kiwix.org) and download one .zim file, such as a suitable Wikipedia edition.
 3. Copy the .zim into the USB's `Library\` folder and select **Refresh All**.
 

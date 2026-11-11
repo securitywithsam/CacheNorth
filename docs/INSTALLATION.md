@@ -52,7 +52,7 @@ Use **Document Search > Add documents**, or copy PDF, TXT, or Markdown files int
 
 ## 6. Add offline archives (optional)
 
-1. Download **Kiwix JS Electron** (Windows portable build) from https://github.com/kiwix/kiwix-js-pwa/releases, and extract it so that `Kiwix\kiwix-js-pwa-win32-ia32\Kiwix JS Electron.exe` exists on the drive.
+1. Download the **portable Windows 10/11 Electron executable** from https://github.com/kiwix/kiwix-js-pwa/releases, not the installer or Microsoft Store package. For example, place `Kiwix-JS-Electron-3.9.3-E.exe` directly in `Kiwix\` on your drive (the version may differ). CacheNorth also recognizes the older `Kiwix\kiwix-js-pwa-win32-ia32\Kiwix JS Electron.exe` layout.
 2. Download `.zim` archives from https://library.kiwix.org and copy them into `Library\`.
 3. Choose **Refresh All**. Each archive shows on the Knowledge Library page.
 
