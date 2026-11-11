@@ -1,6 +1,6 @@
 # Third-party components and licenses
 
-This inventory separates the source-build dependencies from the **cleaned v1.0.3.1 full portable package** and from third-party projects. The tables below describe source/build inputs unless noted; the full ZIP bundles additional material. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The current package inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
+This inventory separates the source-build dependencies from the **v1.0.3.1 full portable package** and from third-party projects. The tables below describe source/build inputs unless noted; the full ZIP bundles additional material. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The current package inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
 
 ## 1. Original CacheNorth work (Security With Sam)
 
@@ -22,7 +22,7 @@ None of these binaries are in the source repository; `fetch_third_party.ps1` and
 
 | Component | Version | Official URL | License | How CacheNorth uses it | Redistribution | Notices / source obligations | Open issues |
 |---|---|---|---|---|---|---|---|
-| KoboldCpp (unpacked `koboldcpp-nocuda`) | 1.124.2 | https://github.com/LostRuins/koboldcpp | AGPL-3.0; bundled parts carry their own licenses (llama.cpp/ggml MIT and others in `vendor_licenses\`) | Local inference engine, separate process | Permitted under AGPL-3.0 | Ship `LICENSE.md` and `vendor_licenses\` (the build copies the whole folder). Anyone distributing builds must provide the **exact corresponding source** for v1.124.2 (for example, a source archive of tag v1.124.2 published alongside each release), not just a link that may disappear. | Cleaned v1.0.3.1 includes aria2 corresponding source and refreshed notices; source-built redistributors should check the exact resulting runtime's included libraries and licenses. |
+| KoboldCpp (unpacked `koboldcpp-nocuda`) | 1.124.2 | https://github.com/LostRuins/koboldcpp | AGPL-3.0; bundled parts carry their own licenses (llama.cpp/ggml MIT and others in `vendor_licenses\`) | Local inference engine, separate process | Permitted under AGPL-3.0 | Ship `LICENSE.md` and `vendor_licenses\` (the build copies the whole folder). Anyone distributing builds must provide the **exact corresponding source** for v1.124.2 (for example, a source archive of tag v1.124.2 published alongside each release), not just a link that may disappear. | v1.0.3.1 includes aria2 corresponding source and refreshed notices; source-built redistributors should check the exact resulting runtime's included libraries and licenses. |
 | Python runtime | 3.12.8 | https://www.python.org | PSF License (includes notices for OpenSSL 3.0.15, SQLite 3.45.3, libffi, zlib, Tcl/Tk 8.6, expat, bzip2, xz) | Embedded interpreter for the backend | Permitted | Python's `LICENSE.txt` is copied into `Documentation\Licenses\Runtime Licenses` | — |
 | PyInstaller bootloader | 6.16.0 | https://pyinstaller.org | GPL-2.0 with bootloader exception | Starts the packaged backend | Permitted for any application license (exception) | None beyond the exception | — |
 | Flask | 3.1.3 | https://palletsprojects.com/p/flask | BSD-3-Clause | Local web API | Permitted | License copied by build | — |
@@ -46,7 +46,7 @@ None of these binaries are in the source repository; `fetch_third_party.ps1` and
 | Component | Version tested | Official URL | License | Use | Redistribution | Obligations / issues |
 |---|---|---|---|---|---|---|
 | Kiwix JS Electron | 3.9.3 (win32) | https://github.com/kiwix/kiwix-js-pwa | GPL-3.0 plus Electron/Chromium notices | Opens `.zim` archives | Permitted with GPL source availability and notices | The Kiwix JS viewer is bundled in the ZIP; review offline behavior and upstream update checker. Electron/Chromium LGPL/MPL source availability remains an open redistribution issue. |
-| GPXSee | 16.18 (x64) | https://www.gpxsee.org | GPL-3.0; bundles Qt 6 (LGPL-3.0) and FFmpeg (LGPL/GPL) | Opens `.map` files | Permitted with GPL/LGPL obligations | Cleaned v1.0.3.1 includes GPXSee and version-matched Qt 6.12.0 and FFmpeg 9.0.1 source archives, license notices and relinking instructions. Future source builds must arrange these separately. |
+| GPXSee | 16.18 (x64) | https://www.gpxsee.org | GPL-3.0; bundles Qt 6 (LGPL-3.0) and FFmpeg (LGPL/GPL) | Opens `.map` files | Permitted with GPL/LGPL obligations | v1.0.3.1 includes GPXSee and version-matched Qt 6.12.0 and FFmpeg 9.0.1 source archives, license notices and relinking instructions. Future source builds must arrange these separately. |
 | Qwen3 1.7B / Qwen3 4B GGUF | Q4_K_M | https://huggingface.co/Qwen | Apache-2.0 | AI models | Permitted with license and attribution | The retained Qwen3 4B file was reported byte-identical to the official Qwen GGUF during the v1.0.3.1 cleanup, as were the other two included models. Keep the maintainer's exact hash evidence with the release. |
 | Qwen3.5 4B GGUF | Q4_K_M (Unsloth quantization) | https://huggingface.co/Qwen, https://huggingface.co/unsloth | Apache-2.0 | AI model | Permitted with license and attribution | — |
 | Kiwix ZIM archives | various | https://library.kiwix.org | Per archive | Offline reference content | Varies (see below) | See section 4 |
@@ -58,10 +58,10 @@ None of these binaries are in the source repository; `fetch_third_party.ps1` and
 |---|---|---|
 | Simple English Wikipedia, Simple English Wiktionary | CC BY-SA (text); media vary | Permitted with attribution and share-alike |
 | iFixit | CC BY-NC-SA 3.0 | **Non-commercial only**; commercial use needs iFixit's written permission |
-| MedlinePlus | Removed from cleaned v1.0.3.1 | Not part of the current package |
+| MedlinePlus | Removed from v1.0.3.1 | Not part of the current package |
 | Ready.gov | U.S. federal content, generally public domain; may contain third-party items and seals | **Unresolved** pending review |
 | based.cooking | Not verified | **Unresolved** |
-| Cloudflare Learning Center | Removed from cleaned v1.0.3.1 | Not part of the current package |
+| Cloudflare Learning Center | Removed from v1.0.3.1 | Not part of the current package |
 | PDF guides (FEMA, USFS, EPA, NOAA, Ready.gov, others) | U.S. government works generally public domain; "Emergency Wound Care" and "Map and Compass" have unknown sources | **Unresolved** for the two unknown-source PDFs |
 
 ## 5. Development and test tools (not shipped)
