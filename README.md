@@ -92,7 +92,7 @@ The native window uses Microsoft Edge WebView2 Runtime; without it, CacheNorth c
 
 ## Important notes
 
-- **Hosted archive is not yet release-cleared:** the link above was supplied by the maintainer, but this audit has not independently confirmed its HTTP response, SHA-256, contents, third-party redistribution rights, or hardware acceptance. Check the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
+- **Hosted archive is not yet release-cleared:** the link above was supplied by the maintainer, but this audit has not independently confirmed its HTTP response, SHA-256, contents, third-party redistribution rights, or hardware acceptance. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
 - **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
 - **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
 - **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
