@@ -1,4 +1,4 @@
-# PROPOSED workflow. It has been checked locally (same commands) but has not yet run on GitHub.
+# CI runs on GitHub for pushes and pull requests. A passing run validates source checks, not the hosted portable ZIP.
 # It needs no secrets, uploads no artifacts, and never downloads models, archives, or GPU drivers.
 name: CI
 

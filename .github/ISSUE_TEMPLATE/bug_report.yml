@@ -1,46 +1,83 @@
 name: Bug report
-description: Report a reproducible CacheNorth problem
+description: Report a reproducible CacheNorth issue
 title: "[Bug] "
 labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: "Do not paste session tokens, private documents, personal conversations, or sensitive log data."
+      value: |
+        Thank you for helping improve CacheNorth.
+        **Privacy:** Never upload a complete USB, WebView2 profile, chat database, cookies, session URL/token, personal PDF, or unredacted logs. Remove usernames and private paths from screenshots.
+        Use SECURITY.md for vulnerabilities instead of a public issue.
   - type: input
     id: version
     attributes:
       label: CacheNorth version
-      placeholder: "e.g. personal-test v1.0.x"
+      description: Include whether this is the hosted full portable ZIP or a build from current source.
+      placeholder: "v1.0.3 full portable ZIP"
     validations:
       required: true
   - type: input
     id: environment
     attributes:
       label: Windows version and hardware
-      placeholder: "Windows build; CPU; RAM; GPU"
+      placeholder: "Windows 11 build 26200; CPU; 16 GB RAM; GPU or none"
     validations:
       required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which feature is affected?
+      options:
+        - Startup or shutdown
+        - AI chat or model selection
+        - Document search
+        - Knowledge Base or Kiwix
+        - Maps or GPXSee
+        - PDF guides
+        - Settings or USB portability
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: AI model (if relevant)
+      placeholder: "Qwen3 1.7B Q4_K_M, or Not applicable"
   - type: dropdown
     id: acceleration
     attributes:
       label: AI acceleration mode
-      options: [CPU, Automatic GPU, Manual GPU, Not applicable]
+      options:
+        - CPU
+        - Automatic GPU
+        - Manual GPU
+        - Not applicable
+  - type: dropdown
+    id: offline
+    attributes:
+      label: Did it happen while offline?
+      options:
+        - Yes
+        - No
+        - Not sure
   - type: textarea
     id: reproduction
     attributes:
       label: Steps to reproduce
-      placeholder: "1. Open... 2. Select... 3. Observe..."
+      placeholder: "1. Extract the ZIP... 2. Launch... 3. Select... 4. Observe..."
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: What did you expect?
     validations:
       required: true
   - type: textarea
     id: observed
     attributes:
-      label: Actual behavior and redacted evidence
+      label: What actually happened?
+      description: If sharing screenshots or logs, first redact personal information and tokens.
     validations:
       required: true

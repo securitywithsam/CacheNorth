@@ -2,11 +2,11 @@
 
 **Make your offline USB useful for you.** Pick your AI model, favorite offline knowledge, local maps, and reference guides. Copy each file into the matching folder, then refresh CacheNorth.
 
-> **Full portable USB download:** [CacheNorth-v1.0.3-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is now hosted, but the 16.9 GiB archive has not finished integrity, licensing, and hardware acceptance checks. Use it only for private testing until cleared. GitHub's **Code → Download ZIP** downloads source code.
+> **Full portable USB download:** [CacheNorth-v1.0.3-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is now hosted, but the 16.9 GiB archive has a matching hosted-download SHA-256, but licensing, privacy, and hardware acceptance checks remain open. Use it only for private testing until cleared. GitHub's **Code → Download ZIP** downloads source code.
 
 ## Start in three steps
 
-1. **Get CacheNorth.** For private testing, download the hosted ZIP, extract it to a USB drive (or a normal folder), and open `Launch CacheNorth.exe`. Until then, see [Build from source](BUILDING.md) if you want to test the source preview.
+1. **Get CacheNorth.** For private testing, download the hosted ZIP, extract it to a USB drive (or normal folder), open the extracted `CacheNorth-v1.0.3-Full-Portable` folder, and double-click `Launch CacheNorth.exe`. For a separate developer workflow, see [Build from source](BUILDING.md).
 2. **Choose what you want offline.** Use the links below to download an AI model, knowledge archives, maps, or PDFs **while you have internet**.
 3. **Copy files into the folders shown below.** In CacheNorth, choose **Refresh All** to update your libraries. For document search, use **Refresh Documents** or the add-documents control.
 
@@ -14,10 +14,10 @@ You can leave optional folders empty. Keep their names and locations unchanged. 
 
 ## Your USB folder map
 
-The examples show a USB called `E:`, but yours might be `D:`, `F:`, or another letter.
+The example shows the files **inside the extracted `CacheNorth-v1.0.3-Full-Portable` folder**. Its enclosing USB might be `D:`, `E:`, `F:`, or another drive letter. Do not place the launcher at the drive root unless you intentionally move the entire contents together.
 
 ```text
-E:\  CACHE NORTH USB
+E:\CacheNorth-v1.0.3-Full-Portable\  ← Open this extracted folder
 │
 ├── Launch CacheNorth.exe                  ← Double-click to start
 ├── Apps\
