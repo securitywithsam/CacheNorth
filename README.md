@@ -6,14 +6,15 @@
 
 CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat with a private local AI model, search your documents, browse Kiwix knowledge archives, open regional maps, and keep reference guides close at hand.
 
-> **Release status: v1.0.3.1 package preparation.** A cleaned portable build has passed the maintainer's 19 functional tests; further hardware and redistribution checks remain. The existing v1.0.3 URL below is the **original archived package**, not the cleaned build. See [v1.0.3.1 package notes](docs/V1031_RELEASE_CANDIDATE.md). Original CacheNorth code retains its limited proprietary early-access license; third-party components retain their own licenses.
+> **Release status: v1.0.3.1 download metadata recorded; live URL verification pending.** A cleaned portable build has passed the maintainer's 19 functional tests; further hardware and redistribution checks remain. The v1.0.3 URL below is the **original archived package**; the v1.0.3.1 URL is based on the owner's planned Cloudflare object name. See [v1.0.3.1 package notes](docs/V1031_RELEASE_CANDIDATE.md). Original CacheNorth code retains its limited proprietary early-access license; third-party components retain their own licenses.
 
 ## Download CacheNorth
 
-**New cleaned v1.0.3.1 download: pending upload and checksum.** Please wait for the verified link before treating it as the current package. The existing link below points to the original v1.0.3 archive.
+**v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
 
 | Package | What you get | Status |
 |---|---|---|
+| **[v1.0.3.1 Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)** — `CacheNorth-v1.0.3.1-Full-Portable.zip` | Cleaned full portable package, **15,993,029,771 bytes compressed** | Filename, size and hash supplied by owner; **hosted download awaiting independent verification** |
 | **[Original v1.0.3 ZIP (historical)](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Original v1.0.3 only; superseded by locally cleaned candidate (new ZIP pending)** |
 | **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
@@ -65,6 +66,14 @@ The original local ZIP and a separate copy downloaded from `downloads.samsonschm
 ```
 
 On Windows PowerShell, check your copy with `Get-FileHash "C:\Path\To\CacheNorth-v1.0.3-Full-Portable.zip" -Algorithm SHA256`. Match it against [SHA256SUMS.txt](SHA256SUMS.txt). **This verifies delivery integrity, not the package's security or third-party redistribution permissions.**
+
+### v1.0.3.1 SHA-256
+
+```text
+4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED  CacheNorth-v1.0.3.1-Full-Portable.zip
+```
+
+Run `Get-FileHash` against the downloaded v1.0.3.1 ZIP, and compare it with [SHA256SUMS.txt](SHA256SUMS.txt). The hash identifies bytes; it does not certify safety.
 
 ## Pick your offline content
 
