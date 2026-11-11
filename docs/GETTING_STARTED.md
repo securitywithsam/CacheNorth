@@ -1,53 +1,65 @@
-# Getting started with CacheNorth
+# Getting started
 
-**Welcome!** CacheNorth is a portable Windows toolkit for local AI, searchable documents, offline knowledge, maps and guides.
+You can run CacheNorth from a Windows folder or copy it to a USB drive. You don't need Python or developer tools for the **Full Portable ZIP**.
 
- > **Download status:** The [v1.0.3.1 ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) is the intended current package (owner-reported local size and SHA-256 above). The link and hosted bytes need independent verification; rights and cross-PC checks remain open.
+## 1. Download
 
-## Which path should I follow?
+Get [CacheNorth v1.0.3.1](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip). It is about 14.9 GiB, so the download may take time.
 
-| What describes you? | Follow this |
+Make sure you have enough space for both the ZIP and the extracted application. The extracted folder is about 17.3 GB. A 32 GB or larger USB drive is recommended.
+
+> [!TIP]
+> The green GitHub **Code → Download ZIP** button downloads **developer source**, not the ready-to-run CacheNorth application.
+
+## 2. Extract
+
+In File Explorer, right-click the downloaded ZIP and choose **Extract All**. Use a writable folder or a USB drive formatted exFAT or NTFS.
+
+Keep the entire `CacheNorth-v1.0.3.1-Full-Portable` folder together. You can move the folder between drive letters.
+
+## 3. Launch
+
+Open the extracted folder and double-click `Launch CacheNorth.exe`. The dashboard opens in its own window when WebView2 is available.
+
+The executable is unsigned. Windows may warn or block it. Check that it came from the [official download](../README.md#download) and [verify the SHA-256](../README.md#download). Follow your device's security policy; never disable Windows protections to launch it.
+
+First startup may take longer from a slow USB drive.
+
+## 4. Start a chat
+
+1. Open **AI Chat**.
+2. Leave the model on **Automatic** for the first test.
+3. Type a simple question and press **Enter**. Use **Shift+Enter** for a line break.
+4. Wait for the AI to answer. CPU speed depends on your hardware.
+
+Automatic normally chooses **Qwen3 1.7B** below 12 GB RAM and **Qwen3.5 4B** otherwise. All three bundled models are Qwen-family GGUF files. A GGUF is a local AI-model file.
+
+## Explore the rest
+
+| Dashboard section | What you can do |
 |---|---|
-| **I want a ready-made offline USB** | Use the **hosted Full Portable ZIP** link on the [main page](../README.md#download-cachenorth), noting that licensing, privacy, and hardware acceptance checks remain open, then follow the steps below |
-| **I have CacheNorth already and want to customize it** | [Customize Your USB — visual folder map and links](CUSTOMIZE_YOUR_USB.md) |
-| **I want to find AI models, Wikipedia, maps or PDF guides** | [Content Sources](CONTENT_SOURCES.md) |
-| **I want to build the Windows app from source today** | [Build from Source](BUILDING.md), then [Installation](INSTALLATION.md) |
-| **Something isn't working** | [Troubleshooting](TROUBLESHOOTING.md) |
+| **Knowledge Library** | Open downloaded ZIM archives in Kiwix; a ZIM is an offline website/library file |
+| **Document Search** | Add PDF, TXT or Markdown documents and ask questions with source cards |
+| **Offline Maps** | Open Mapsforge maps in GPXSee |
+| **Guides** | Open bundled reference PDFs |
+| **Settings** | Change **AI Model Manager**, **AI acceleration**, **Context length**, and privacy/safety options |
+| **System Status** | See information about the current session and storage |
 
-## The easy USB setup (hosted preview)
+Click **Refresh All** at the top right after adding models, maps, archives or guides.
 
-1. Download the **Full Portable ZIP** with a matching hosted-copy SHA-256 from [Download CacheNorth](../README.md#download-cachenorth). Do **not** use GitHub's green **Code → Download ZIP** button; that is source code.
-2. Extract it to a writable USB drive or folder. **Open the extracted `CacheNorth-v1.0.3.1-Full-Portable` folder** and keep its contents together.
-3. Inside that folder, double-click `Launch CacheNorth.exe`.
-4. Explore **AI Chat**, **Knowledge Base**, **Maps**, and **Guides**. CacheNorth is designed to work offline after its resources have been downloaded.
-5. Want to add your own files? Open [Customize Your USB](CUSTOMIZE_YOUR_USB.md), copy files into the indicated folders, and choose **Refresh All**.
+## Add your own files
 
-**You choose the content.** Keep just a small AI model and a few guides, or add regional maps and larger knowledge libraries. You don't need to fill every folder.
+[Add Your Content](ADD_YOUR_CONTENT.md) has the exact folders and official starting-point links.
 
-## Quick USB folder cheat sheet
+## First-run checklist
 
-| Add | Folder on the USB |
-|---|---|
-| AI model (.gguf) | `Apps\Offline AI\Models\` |
-| Knowledge archive (.zim) | `Library\` |
-| Mapsforge map (.map) | `Maps\` |
-| Reading PDF | `Guides\` |
-| PDF/TXT/MD you want AI to search | `Apps\Offline AI\Data\Documents\` |
+- [ ] The dashboard opens.
+- [ ] **AI Chat** answers a question.
+- [ ] **Knowledge Library** opens an archive.
+- [ ] **Offline Maps** opens a regional map.
+- [ ] **Guides** opens a PDF.
+- [ ] Close CacheNorth and any external viewers before ejecting your USB.
 
-For the full folder map, model size suggestions, specific download links, and Kiwix/GPXSee viewer setup, see **[Customize Your USB](CUSTOMIZE_YOUR_USB.md)**.
+Chats, imported documents and indexes are stored on the drive and are **not encrypted**. Protect the USB if it contains sensitive information.
 
-## If you want to build now
-
-This v1.0.3 source preview requires a Windows development machine. See [Build from Source](BUILDING.md) for prerequisites, verified third-party dependency downloads, automated tests and build commands. Then use [Installation](INSTALLATION.md) to copy the generated build onto your USB.
-
-The source repository does not include AI weights, ZIM archives, maps, personal documents or a ready-to-run executable package.
-
-## Safety and compatibility
-
-- Windows 11 is tested; Windows 10 and several lower-memory/managed configurations still need validation.
-- The app is currently unsigned; Windows may warn about or block components. Do not weaken Windows security to install it.
-- Chats, documents, indexes and settings can contain private information and are stored unencrypted on the USB. Never publicly upload a personal drive copy.
-- Download from the original project/provider pages and verify file licenses, sizes and integrity where available. Rights vary for ZIMs, maps and PDFs.
-- Local AI can make mistakes and offline knowledge can become outdated. Verify critical medical, emergency and navigation information.
-
-**Next:** [Customize Your USB](CUSTOMIZE_YOUR_USB.md) · [Content Sources](CONTENT_SOURCES.md) · [Troubleshooting](TROUBLESHOOTING.md)
+Need help? See [Troubleshooting](TROUBLESHOOTING.md) or [FAQ](FAQ.md).
