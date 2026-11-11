@@ -1,4 +1,4 @@
-# CacheNorth Troubleshooting
+# Troubleshooting
 
 ## CacheNorth does not open
 
@@ -10,7 +10,7 @@ CacheNorth currently supports **Qwen-family GGUF** models only. An unsupported l
 
 ## The AI engine does not start
 
-Open `Apps\Offline AI\Data\Logs\koboldcpp.log`. Confirm that `Apps\Offline AI\KoboldCpp\koboldcpp-launcher.exe` and the Qwen GGUF model remain in their original relative locations. Check available RAM and Windows temporary storage. CacheNorth performs its allowed attempt and reports failure without entering a restart loop. The unpacked runtime runs in place and avoids per-launch PyInstaller extraction into Windows temporary storage. Keep every file in the KoboldCpp folder together; missing CPU or Vulkan DLLs can force fallback or prevent startup.
+Open `Apps\Offline AI\Data\Logs\koboldcpp.log` if you need detailed diagnostics; never share it without removing private paths, session values, and other sensitive data. Confirm that `Apps\Offline AI\KoboldCpp\koboldcpp-launcher.exe` and the Qwen GGUF model remain in their original relative locations. Check available RAM and Windows temporary storage. CacheNorth performs its allowed attempt and reports failure without entering a restart loop. The unpacked runtime runs in place and avoids per-launch PyInstaller extraction into Windows temporary storage. Keep every file in the KoboldCpp folder together; missing CPU or Vulkan DLLs can force fallback or prevent startup.
 
 ## Choosing a context length
 
@@ -75,3 +75,7 @@ CacheNorth waits for the AI engine to exit, removes its session file, flushes lo
 ## Privacy and traces
 
 CacheNorth directs its application data to the portable data folder and binds its local services to loopback. Windows, browsers, Defender, Kiwix, GPXSee, and opened documents can create temporary files, caches, recent-file records, compatibility records, or registry settings. CacheNorth makes no zero-trace claim.
+
+## Still stuck?
+
+Return to [Getting Started](GETTING_STARTED.md) or [FAQ](FAQ.md). For reproducible problems, use the GitHub bug-report form and include Windows version, RAM, CPU or GPU mode, and a model filename. **Never upload personal chats, databases, cookies, or unredacted logs.**
