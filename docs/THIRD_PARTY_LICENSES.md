@@ -1,8 +1,6 @@
-> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
-
 # Third-party components and licenses
 
-This inventory separates the source-build dependencies from the **cleaned v1.0.3.1 full portable package** and from third-party projects. The tables below describe source/build inputs unless noted; the cleaned full ZIP bundles additional material. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The current cleaned package inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
+This inventory separates the source-build dependencies from the **cleaned v1.0.3.1 full portable package** and from third-party projects. The tables below describe source/build inputs unless noted; the full ZIP bundles additional material. It is an engineering inventory, not legal advice. Items marked **Unresolved** must not be treated as cleared for redistribution. The current package inventory and iFixit commercial-rights analysis are in [CONTENT_LICENSES.md](CONTENT_LICENSES.md).
 
 ## 1. Original CacheNorth work (Security With Sam)
 
@@ -43,11 +41,11 @@ None of these binaries are in the source repository; `fetch_third_party.ps1` and
 | Microsoft WebView2 SDK (Core, WinForms, Loader DLLs) | 1.0.4314.35 | https://www.nuget.org/packages/Microsoft.Web.WebView2 | Microsoft WebView2 SDK license | Native dashboard window | Permitted for the listed redistributable DLLs under the package license | Package `LICENSE.txt` copied to `Documentation\Licenses\Microsoft.Web.WebView2-SDK.txt`. The Evergreen WebView2 Runtime is **not** bundled. | — |
 | Microsoft Visual C++ runtime DLLs | as shipped with Python/KoboldCpp | https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files | Microsoft redistributable terms | Required by the native libraries | Permitted as application-local redistributables | — | — |
 
-## 3. Optional components for source builders (already included in the cleaned full portable package)
+## 3. Optional components for source builders (already included in the full portable package)
 
 | Component | Version tested | Official URL | License | Use | Redistribution | Obligations / issues |
 |---|---|---|---|---|---|---|
-| Kiwix JS Electron | 3.9.3 (win32) | https://github.com/kiwix/kiwix-js-pwa | GPL-3.0 plus Electron/Chromium notices | Opens `.zim` archives | Permitted with GPL source availability and notices | The Kiwix JS viewer is bundled in the cleaned ZIP; review offline behavior and upstream update checker. Electron/Chromium LGPL/MPL source availability remains an open redistribution issue. |
+| Kiwix JS Electron | 3.9.3 (win32) | https://github.com/kiwix/kiwix-js-pwa | GPL-3.0 plus Electron/Chromium notices | Opens `.zim` archives | Permitted with GPL source availability and notices | The Kiwix JS viewer is bundled in the ZIP; review offline behavior and upstream update checker. Electron/Chromium LGPL/MPL source availability remains an open redistribution issue. |
 | GPXSee | 16.18 (x64) | https://www.gpxsee.org | GPL-3.0; bundles Qt 6 (LGPL-3.0) and FFmpeg (LGPL/GPL) | Opens `.map` files | Permitted with GPL/LGPL obligations | Cleaned v1.0.3.1 includes GPXSee and version-matched Qt 6.12.0 and FFmpeg 9.0.1 source archives, license notices and relinking instructions. Future source builds must arrange these separately. |
 | Qwen3 1.7B / Qwen3 4B GGUF | Q4_K_M | https://huggingface.co/Qwen | Apache-2.0 | AI models | Permitted with license and attribution | The retained Qwen3 4B file was reported byte-identical to the official Qwen GGUF during the v1.0.3.1 cleanup, as were the other two included models. Keep the maintainer's exact hash evidence with the release. |
 | Qwen3.5 4B GGUF | Q4_K_M (Unsloth quantization) | https://huggingface.co/Qwen, https://huggingface.co/unsloth | Apache-2.0 | AI model | Permitted with license and attribution | — |
