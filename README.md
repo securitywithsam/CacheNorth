@@ -14,7 +14,7 @@ CacheNorth turns a Windows USB drive into a customizable offline toolkit: chat w
 
 | Package | What you get | Status |
 |---|---|---|
-| **[Original v1.0.3 ZIP (historical)](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Hosted early-access candidate — SHA-256 matched; other checks pending** |
+| **[Original v1.0.3 ZIP (historical)](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip)** — `CacheNorth-v1.0.3-Full-Portable.zip` | Ready-to-run app and offline content; candidate archive **approximately 16.9 GiB** (exact file length not independently recorded; prior byte count was reported as *size on disk*) | **Original v1.0.3 only; superseded by locally cleaned candidate (new ZIP pending)** |
 | **Source project** | Application code, tests, build scripts and documentation | Available on `main` (private preview); for developers |
 
 **For the original v1.0.3 archive only:** download the hosted Full Portable ZIP → extract it to a writable USB drive or a folder → open the extracted `CacheNorth-v1.0.3-Full-Portable` folder → open `Launch CacheNorth.exe` → customize it with your own models, knowledge, maps and PDFs.
@@ -110,7 +110,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## Important notes
 
-- **Early-access limitations:** the maintainer compared the local ZIP and a newly downloaded copy and found matching SHA-256 values. The complete archive still contains generated runtime data (including browser profile, logs and databases) and has unresolved per-item redistribution questions. These risks remain relevant even for a free release. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
+- **Early-access limitations:** the maintainer compared the local ZIP and a newly downloaded copy and found matching SHA-256 values. The **original v1.0.3 historical archive** contained generated runtime data; the cleaned v1.0.3.1 candidate removed it. Remaining Chromium/Electron source and iFixit content-rights questions still need resolution before broad distribution. Complete the [Full Portable ZIP checklist](docs/FULL_PORTABLE_RELEASE_CHECKLIST.md) and the [release gate](docs/PUBLIC_RELEASE_GATE.md) before announcing a public launch.
 - **Privacy:** chats, added documents, and indexes are stored unencrypted on the drive. Keep your USB secure, and never share a personal data-filled copy.
 - **Third-party rights:** model weights, ZIM content, map data, PDFs and optional viewers have separate licenses and attribution requirements. A download link does not imply blanket permission to redistribute everything inside.
 - **Offline limitations:** model answers may be incorrect, and offline emergency/navigation material can become outdated. Verify critical information.
@@ -118,7 +118,7 @@ Original CacheNorth source and branding remain **all rights reserved**, with lim
 
 ## For developers
 
-Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not change the hosted v1.0.3 ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The compiled binary and complete USB package still require separate release approval.
+Want to build, review or modify CacheNorth? See the [Build from Source](docs/BUILDING.md), [Architecture](docs/ARCHITECTURE.md), [Security](SECURITY.md), and [Third-party Licenses](docs/THIRD_PARTY_LICENSES.md) guides. The source is consolidated on `main`. **Source updates do not change the hosted v1.0.3 ZIP.** See [Source vs. Hosted ZIP](docs/SOURCE_VS_HOSTED_ZIP.md) and the [v1.0.4 backlog](docs/V104_BACKLOG.md) for version boundaries and deferred fixes. The cleaned package has been tested on one PC; it still requires a new hosted ZIP integrity record and remaining redistribution review.
 
 To report a bug, use the repository's issue template and check logs for personal information before sharing them. Security issues should be reported privately via [Security](SECURITY.md).
 
