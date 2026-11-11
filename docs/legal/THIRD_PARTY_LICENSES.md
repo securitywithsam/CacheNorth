@@ -1,6 +1,6 @@
 # CacheNorth content rights — v1.0.3.1 package
 
-This applies to the **v1.0.3.1 portable download**. Its filename, reported size and checksum are listed in the [README](../README.md). See [release candidate](../maintainers/V1031_RELEASE_NOTES.md).
+This applies to the **v1.0.3.1 portable download**. Its filename, reported size and checksum are listed in the [README](../../README.md). See [release candidate](../maintainers/V1031_RELEASE_NOTES.md).
 
 Free access does not automatically establish noncommercial use or override upstream licenses. This is a tracking record rather than legal clearance.
 
