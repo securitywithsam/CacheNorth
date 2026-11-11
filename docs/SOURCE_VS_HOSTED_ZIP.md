@@ -1,4 +1,4 @@
-> **v1.0.3.1 packaging update (November 2026):** A separately cleaned and tested portable package is being prepared. It has 2,933 files (17,300,263,255 uncompressed bytes), refreshed beginner PDFs, three verified Qwen GGUFs, five ZIM archives, four maps, five content guides, source and attribution materials, and no retained chat/browser/log data. The original v1.0.3 [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) and its [checksum](../SHA256SUMS.txt) remain historical and unchanged. **The v1.0.3.1 download URL, compressed size and SHA-256 are pending the owner's upload; do not substitute the old checksum.** See [package changes and open issues](V1031_RELEASE_CANDIDATE.md). The repo remains private.
+> **v1.0.3.1 uploaded-artifact metadata (owner reported):** [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip) — **15,993,029,771 bytes** (15.99 GB decimal; ~14.90 GiB), SHA-256 `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`. The URL follows the existing Cloudflare R2 custom-domain naming pattern, but **the new download has not yet been independently fetched or verified**. Verify the hosted copy before announcing it. The old v1.0.3 ZIP remains a separate historical artifact.
 
 # Source code vs. the hosted ZIPs
 
@@ -11,7 +11,15 @@ CacheNorth has **two distinct deliverables**:
 
 **Editing GitHub does not update the Cloudflare-hosted ZIP.** Treat the downloadable v1.0.3 archive as a fixed historical release candidate. Later repository changes to Python, C#, JavaScript, styles, documentation, attribution, tests, or dependencies are **not** automatically installed in that archive.
 
-## Hosted ZIP record
+## New cleaned v1.0.3.1 ZIP record (owner-reported; hosted URL unverified)
+
+- Filename: `CacheNorth-v1.0.3.1-Full-Portable.zip`
+- Expected URL: [download](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
+- Exact compressed length: 15,993,029,771 bytes
+- SHA-256 of local ZIP: `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`
+- The new package and checksum are distinct from the original v1.0.3 archive below.
+
+## Historical v1.0.3 hosted ZIP record
 
 - Filename: `CacheNorth-v1.0.3-Full-Portable.zip`
 - Advertised compressed size: approximately **16.9 GiB**; exact byte length needs measurement using file **Length**, not **Size on disk**.
