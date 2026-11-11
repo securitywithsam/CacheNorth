@@ -9,6 +9,7 @@ $ErrorActionPreference = "Stop"
 $resolved = (Resolve-Path -LiteralPath $ZipPath).Path
 if (-not (Test-Path -LiteralPath $resolved -PathType Leaf)) { throw "ZIP file not found: $ZipPath" }
 Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
 $hash = (Get-FileHash -LiteralPath $resolved -Algorithm SHA256).Hash.ToLowerInvariant()
 Write-Host "Archive: $resolved"
 Write-Host "Bytes: $((Get-Item -LiteralPath $resolved).Length)"
