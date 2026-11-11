@@ -1,8 +1,8 @@
 # CacheNorth v1.0.3.1 — portable release candidate
 
-**Status: owner-reported ZIP metadata available; hosted URL/bytes not yet independently verified.** This repository remains private. The existing [v1.0.3 ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3-Full-Portable.zip) is the original historical artifact, with [its own checksum](../SHA256SUMS.txt); it has **not** been replaced by editing this repository.
+**Status: owner-reported ZIP metadata available; hosted URL/bytes not yet independently verified.** This repository remains private. This document describes the current v1.0.3.1 package.
 
-## New ZIP details (pending hosted verification)
+## Download details
 
 - Expected Cloudflare download: [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
 - Exact ZIP length: **15,993,029,771 bytes**
@@ -10,11 +10,11 @@
 - Windows verification: `Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3.1-Full-Portable.zip" -Algorithm SHA256`
 - **Verification status:** The custom-domain URL is inferred from the established naming scheme; an independent download/hash check is outstanding.
 
-## What changed compared with the original v1.0.3 package
+## What's included in this release
 
 This is a packaging, documentation, content-rights and privacy cleanup. **The application binaries and AI behavior were not rebuilt or changed.** The maintainer's clean folder contains 2,933 files totaling **17,300,263,255 bytes uncompressed** (decimal GB: 17.30; GiB: about 16.11). This is **not** the ZIP's compressed size, which is recorded above.
 
-- Removed generated browser/WebView2 state, chat and search databases, session data, logs and local test artifacts. The cleaned `Data` folder contains default settings and four empty directories.
+- Removed generated browser/WebView2 state, chat and search databases, session data, logs and local test artifacts. The `Data` folder contains default settings and four empty directories.
 - Removed the Cloudflare and MedlinePlus ZIM archives and two PDFs without established complete redistribution rights: *Map and Compass* and the NWS spotter guide with third-party photographs.
 - Removed six optional PortableApps installers, a duplicate GPXSee installer and legacy `Start Offline AI.bat`.
 - Retained three GGUFs **Qwen3 1.7B, Qwen3 4B and Qwen3.5 4B**, whose files were confirmed to match their official published hashes. **Qwen-family models only** are supported by this v1.0.3.x model manager.
@@ -31,7 +31,7 @@ The maintainer reports **19/19 tests passed on one Windows 11 PC**, including na
 ## Release verification still required
 
 1. Compress the **application folder only**; exclude the private `_work` reports/hosting folder. Preserve four empty `Data` directories.
-2. Record **exact ZIP filename, compressed byte length and SHA-256** from the finished archive, and check extraction and startup. Publish these values together with the new Cloudflare download link. **Never reuse the v1.0.3 checksum for v1.0.3.1.**
+2. Record **exact ZIP filename, compressed byte length and SHA-256** from the finished archive, and check extraction and startup. Publish these values together with the new Cloudflare download link. Compare against the v1.0.3.1 checksum above.
 3. Resolve the applicable source-distribution obligations for bundled Chromium/Electron components, including the LGPL/MPL source availability/relinking questions.
 4. Confirm that distribution of the iFixit CC BY-NC-SA archive qualifies as noncommercial or obtain appropriate permission; remove the archive if neither condition is satisfied.
 5. Set a usable public licensing/contact address before broad distribution. Original CacheNorth code remains under its [limited proprietary early-access license](../LICENSE).
@@ -41,6 +41,6 @@ These are engineering and rights-tracking notes, not a legal certification. Dist
 
 ## Documentation scope
 
-This page describes the **cleaned v1.0.3.1 package**, based on the maintainer's final cleanup and test report. Other documentation may still discuss historical v1.0.3 source builds, optional third-party dependencies and original package behavior; those descriptions should not be interpreted as the final cleaned package inventory.
+This page describes the **v1.0.3.1 package**, based on the maintainer's test report. Developer build instructions may describe optional components that are already bundled in the full portable download.
 
-For setup see [Getting Started](GETTING_STARTED.md), [Customization](CUSTOMIZE_YOUR_USB.md) and [Troubleshooting](TROUBLESHOOTING.md). For historical package identity, see [Source vs hosted ZIP](SOURCE_VS_HOSTED_ZIP.md).
+For setup see [Getting Started](GETTING_STARTED.md), [Customization](CUSTOMIZE_YOUR_USB.md) and [Troubleshooting](TROUBLESHOOTING.md). For download differences, see [Source vs hosted ZIP](SOURCE_VS_HOSTED_ZIP.md).
