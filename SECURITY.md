@@ -2,9 +2,9 @@
 
 ## Reporting a vulnerability
 
-Please report security problems privately to the maintainer through a secure channel. When the repository is public and GitHub private vulnerability reporting is enabled, use **Security → Report a vulnerability**. Do not post sensitive security details in a public issue. Include the CacheNorth version, Windows version, and steps to reproduce. Do not include personal documents or conversations.
+Please report security problems privately to the maintainer through a secure channel. If GitHub private vulnerability reporting is enabled for this public repository, use **Security → Report a vulnerability**. Do not post sensitive security details in a public issue. Include the CacheNorth version, Windows version, and steps to reproduce. Do not include personal documents or conversations.
 
-**Maintainer:** Confirm private vulnerability reporting is enabled before making the repository public.
+**Maintainer:** Confirm whether private vulnerability reporting is enabled and provide a private reporting channel if it is unavailable. This policy does not assert that the feature is enabled. If no private channel is available, open a public issue requesting one without disclosing vulnerability details.
 
 ## Security model
 

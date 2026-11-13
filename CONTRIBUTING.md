@@ -29,4 +29,4 @@ Use [Security](SECURITY.md) for private reporting of vulnerabilities.
 - Never commit model weights, ZIMs, maps, binaries, personal data, or content without approved redistribution rights.
 - See [Building](docs/advanced/BUILDING.md), [Release readiness](docs/maintainers/RELEASE_CHECKLIST.md), and [Source vs. Portable ZIP](docs/FAQ.md).
 
-**The GitHub repository is private during early-access preparation.** Release and visibility decisions belong to the maintainer.
+**The GitHub repository is public, and v1.0.3.1 is a published early-access prerelease.** Public source visibility does not change the proprietary license or contribution permissions above.

@@ -1,4 +1,5 @@
 # CacheNorth v1.0.3.1 Full Portable ZIP
-# Maintainer-reported local ZIP SHA-256; independently verify hosted copy before publication.
+# ZIP hosted at https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip
+# Owner confirmed the downloaded hosted copy matches this SHA-256.
 # A matching hash proves file identity, not safety or redistribution clearance.
 4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED  CacheNorth-v1.0.3.1-Full-Portable.zip

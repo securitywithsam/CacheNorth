@@ -1,14 +1,14 @@
 # CacheNorth v1.0.3.1 — maintainer release record
 
-**Status: owner-reported ZIP metadata available; hosted URL/bytes not yet independently verified.** This repository remains private. This document describes the current v1.0.3.1 package.
+**Status: public repository; v1.0.3.1 published as an early-access prerelease.** The full portable ZIP is hosted at downloads.samsonschmidt.com, and the owner confirmed that the downloaded hosted copy matches the SHA-256 below. iFixit and Chromium/Electron licensing questions remain unresolved. This document describes the current v1.0.3.1 package.
 
 ## Download details
 
-- Expected Cloudflare download: [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
+- Hosted full portable download: [CacheNorth-v1.0.3.1-Full-Portable.zip](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
 - Exact ZIP length: **15,993,029,771 bytes**
-- SHA-256 of owner's local compressed file: `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`
+- SHA-256 (owner-confirmed match for the hosted download): `4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED`
 - Windows verification: `Get-FileHash "C:\\Path\\To\\CacheNorth-v1.0.3.1-Full-Portable.zip" -Algorithm SHA256`
-- **Verification status:** The custom-domain URL is inferred from the established naming scheme; an independent download/hash check is outstanding.
+- **Verification status:** The owner confirmed a matching SHA-256 for the hosted download; this document does not claim a separate independent download/hash check.
 
 ## What's included in this release
 
@@ -26,16 +26,20 @@ This is a packaging, documentation, content-rights and privacy cleanup. **The ap
 
 The maintainer reports **19/19 tests passed on one Windows 11 PC**, including native launch, CPU chat with all three models, Automatic model selection, synthetic document search with citations, Kiwix, GPXSee, PDF open, Refresh All, path boundary checks, clean shutdown and an alternate mapped drive letter. Key shipped application binaries were checked as unchanged. The cleanup reports and file-level checksums are maintained privately outside the customer ZIP.
 
+**Windows 10 is expected to work but remains untested.**
+
 **Not acceptance-tested:** a real USB 3 or slow USB drive, another PC, Windows 10, an 8 GB machine, GPU acceleration, the documents file-picker control and Windows SmartScreen behavior for a newly downloaded ZIP. The SHA-256 proves a file matches the published artifact; it does not prove safety.
 
-## Release verification still required
+## Remaining verification and licensing follow-up
 
-1. Compress the **application folder only**; exclude the private `_work` reports/hosting folder. Preserve four empty `Data` directories.
-2. Record **exact ZIP filename, compressed byte length and SHA-256** from the finished archive, and check extraction and startup. Publish these values together with the new Cloudflare download link. Compare against the v1.0.3.1 checksum above.
-3. Resolve the applicable source-distribution obligations for bundled Chromium/Electron components, including the LGPL/MPL source availability/relinking questions.
-4. Confirm that distribution of the iFixit CC BY-NC-SA archive qualifies as noncommercial or obtain appropriate permission; remove the archive if neither condition is satisfied.
-5. Set a usable public licensing/contact address before broad distribution. Original CacheNorth code remains under its [limited proprietary early-access license](../../LICENSE).
-6. Perform a second-machine/USB smoke test where practical.
+The ZIP is hosted and the prerelease is published; those publication steps are complete. The following items remain open:
+
+1. Confirm the finished archive excludes private `_work` reports, preserves four empty `Data` directories, and extracts and starts correctly; these package checks are not established by a matching hash alone.
+2. Resolve the applicable source-distribution obligations for bundled Chromium/Electron components, including the LGPL/MPL source availability/relinking questions.
+3. Confirm that distribution of the iFixit CC BY-NC-SA archive qualifies as noncommercial or obtain appropriate permission; remove the archive if neither condition is satisfied.
+4. Perform a second-machine/USB smoke test where practical.
+
+General licensing inquiries can use [GitHub Issues](https://github.com/securitywithsam/CacheNorth/issues). Original CacheNorth code remains under its [limited proprietary early-access license](../../LICENSE).
 
 These are engineering and rights-tracking notes, not a legal certification. Distribution for free does not itself establish noncommercial status under all content licenses.
 
