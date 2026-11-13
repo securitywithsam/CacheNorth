@@ -23,6 +23,23 @@ CacheNorth is a portable toolkit you can put on a USB drive or use from a Window
 
 ### [Download CacheNorth v1.0.3.1 — Full Portable ZIP](https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip)
 
+> [!IMPORTANT]
+> The Full Portable ZIP is approximately 16 GB. Browser downloads may fail with `Failed – Network error`. If that happens, use the resumable PowerShell method below.
+
+<details>
+<summary><strong>Alternative download method (Windows PowerShell — resumable)</strong></summary>
+
+Windows 10 and 11 include `curl.exe`. Before starting, ensure there is no preexisting `CacheNorth-v1.0.3.1-Full-Portable.zip` from a browser download in your Downloads folder.
+
+```powershell
+cd "$env:USERPROFILE\Downloads"
+curl.exe -L -C - --retry 10 --retry-delay 5 -o "CacheNorth-v1.0.3.1-Full-Portable.zip" "https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip"
+```
+
+If the download is interrupted, re-run the same command to resume the incomplete file. After it completes, verify the SHA-256 checksum below.
+
+</details>
+
 **ZIP size:** 15,993,029,771 bytes (about 14.9 GiB).
 
 **SHA-256 checksum (verified against the hosted ZIP):**
