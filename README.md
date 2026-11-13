@@ -25,7 +25,7 @@ CacheNorth is a portable toolkit you can put on a USB drive or use from a Window
 
 **ZIP size:** 15,993,029,771 bytes (about 14.9 GiB).
 
-**SHA-256 checksum:**
+**SHA-256 checksum (verified against the hosted ZIP):**
 ```text
 4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED
 ```
@@ -39,7 +39,7 @@ Get-FileHash "C:\Path\To\CacheNorth-v1.0.3.1-Full-Portable.zip" -Algorithm SHA25
 Replace `C:\Path\To\` with where you saved the ZIP. The hash should match the value above. A matching checksum confirms the file is identical to the expected release; it does not prove that software is safe.
 
 > [!NOTE]
-> **Free early access:** CacheNorth is still being tested across different computers. Windows 11 CPU operation was tested. Windows 10, 8 GB systems, GPU acceleration, and some security-managed PCs need additional testing.
+> **Free early access:** CacheNorth is still being tested across different computers. Windows 11 CPU operation was tested. Windows 10 is expected to work but has not been tested; compatibility is not guaranteed. 8 GB systems, GPU acceleration, and some security-managed PCs also need additional testing.
 
 ## Start in four steps
 
@@ -54,7 +54,7 @@ Replace `C:\Path\To\` with where you saved the ZIP. The hash should match the va
 
 | Component | Guidance |
 |---|---|
-| Operating system | 64-bit Windows 10 or 11; Windows 11 tested |
+| Operating system | 64-bit Windows 10 or 11; Windows 11 tested, Windows 10 expected to work but untested |
 | Memory | 16 GB recommended; 8 GB compatibility needs more testing |
 | CPU | 64-bit Windows-compatible processor; AVX2 is faster. Compatibility with every older CPU is not guaranteed |
 | GPU | Optional; CPU mode works without one. Vulkan acceleration is experimental |
