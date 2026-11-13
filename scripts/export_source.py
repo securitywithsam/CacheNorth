@@ -46,11 +46,9 @@ FORBIDDEN_SUFFIXES = {".exe", ".dll", ".pyd", ".pyc", ".gguf", ".zim", ".map", "
 MAX_BYTES = 2 * 1024 * 1024
 PRIVATE_PATTERNS = {
     "personal path": re.compile(r"C:[\\/]{1,2}Users[\\/]{1,2}(?![<%$])\w", re.I),
-    "developer name in path": re.compile(r"Samso", re.I),
-    "USB volume label": re.compile(r"OFFLINE-KIT"),
-    "USB serial": re.compile(r"74F6-?7862", re.I),
-    "USB hardware": re.compile(r"Kingston", re.I),
-    "machine id": re.compile(r"9bdbbb08b8daef0e"),
+    "USB volume label": re.compile(r"\\b(?:USB\\s+volume\\s+label|volume\\s+label)\\s*[:=]\\s*['\\\"]?[A-Za-z0-9_-]{3,}", re.I),
+    "USB volume serial": re.compile(r"\\b[0-9a-f]{4}-[0-9a-f]{4}\\b", re.I),
+    "machine fingerprint": re.compile(r"\\b[0-9a-f]{16}\\b", re.I),
     "email address": re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.(?:com|net|org|io)\b"),
     "private key": re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     "GitHub token": re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}"),
