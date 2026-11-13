@@ -29,14 +29,44 @@ CacheNorth is a portable toolkit you can put on a USB drive or use from a Window
 <details>
 <summary><strong>Alternative download method (Windows PowerShell — resumable)</strong></summary>
 
-Windows 10 and 11 include `curl.exe`. Before starting, ensure there is no preexisting `CacheNorth-v1.0.3.1-Full-Portable.zip` from a browser download in your Downloads folder.
+Windows 10 and 11 include `curl.exe`; no extra download software is needed. Open **PowerShell**, paste the entire block, and press **Enter**. Before starting, move or rename any **unrelated browser-generated partial ZIP** with the same filename in Downloads. Keep any partial file previously created by this method so it can resume.
 
 ```powershell
-cd "$env:USERPROFILE\Downloads"
-curl.exe -L -C - --retry 10 --retry-delay 5 -o "CacheNorth-v1.0.3.1-Full-Portable.zip" "https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip"
+$ErrorActionPreference = "Stop"
+$url = "https://downloads.samsonschmidt.com/CacheNorth-v1.0.3.1-Full-Portable.zip"
+$file = Join-Path $env:USERPROFILE "Downloads\CacheNorth-v1.0.3.1-Full-Portable.zip"
+$expectedSize = [long]15993029771
+$expectedHash = "4D6711127EAC4803756963359AD331CA41150385B300C02D862B48B0094EAAED"
+
+for ($attempt = 1; $attempt -le 50; $attempt++) {
+    $size = if (Test-Path -LiteralPath $file) { (Get-Item -LiteralPath $file).Length } else { 0 }
+    if ($size -gt $expectedSize) { throw "File is larger than expected. Stop and check the file." }
+    if ($size -eq $expectedSize) { break }
+
+    Write-Host "Download attempt $attempt of 50 (already have $size bytes)..."
+    & curl.exe --http1.1 --fail -L -C - --connect-timeout 30 -o $file $url
+    $curlExitCode = $LASTEXITCODE
+
+    $size = if (Test-Path -LiteralPath $file) { (Get-Item -LiteralPath $file).Length } else { 0 }
+    if ($size -eq $expectedSize) { break }
+    if ($size -gt $expectedSize) { throw "File is larger than expected. Stop and check the file." }
+    Write-Warning "Transfer interrupted (curl exit code $curlExitCode); retrying in 5 seconds..."
+    Start-Sleep -Seconds 5
+}
+
+if (!(Test-Path -LiteralPath $file) -or (Get-Item -LiteralPath $file).Length -ne $expectedSize) {
+    throw "Download incomplete after 50 attempts. Run this same block again to resume."
+}
+
+Write-Host "Checking SHA-256 (this may take a minute)..."
+$actualHash = (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash
+if ($actualHash -ne $expectedHash) {
+    throw "CHECKSUM MISMATCH. Do not extract or run this ZIP. Get a fresh copy."
+}
+Write-Host "Download complete and SHA-256 verified: $file"
 ```
 
-If the download is interrupted, re-run the same command to resume the incomplete file. After it completes, verify the SHA-256 checksum below.
+This automatically retries connection resets, resuming from the bytes already downloaded. You can rerun the same block after closing PowerShell or if all 50 attempts fail. **A stable connection cannot be guaranteed.** The script reports success only when the full file size and SHA-256 match; if the checksum fails, do not use the ZIP.
 
 </details>
 
