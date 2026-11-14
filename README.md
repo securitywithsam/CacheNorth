@@ -133,6 +133,20 @@ CacheNorth's executables are unsigned. Windows SmartScreen or Smart App Control 
 - [Troubleshooting](docs/TROUBLESHOOTING.md)
 - [Frequently asked questions](docs/FAQ.md)
 
+## Credits & Acknowledgments
+
+CacheNorth combines original software and interface development by **Security With Sam** with independently developed third-party software and reference resources. Thanks to the projects and contributors that make offline access to useful tools and information possible.
+
+- [KoboldCpp](https://github.com/LostRuins/koboldcpp) — local AI inference engine.
+- [Qwen](https://github.com/QwenLM) — AI models.
+- [Kiwix](https://www.kiwix.org/) — offline knowledge library reader.
+- [GPXSee](https://www.gpxsee.org/) — offline map viewer.
+- [OpenStreetMap](https://www.openstreetmap.org/copyright) — geographic data © OpenStreetMap contributors.
+- [iFixit](https://www.ifixit.com/) — repair guides and reference material.
+- [Wikipedia](https://www.wikipedia.org/) and [Wiktionary](https://www.wiktionary.org/) — offline reference material.
+
+CacheNorth is an independent project and is not officially affiliated with or endorsed by these organizations. Third-party software and content remain subject to their respective licenses and permissions. See [Third-Party Licenses](docs/legal/THIRD_PARTY_LICENSES.md) for details, including outstanding redistribution reviews.
+
 ## License and safety
 
 Original CacheNorth code and branding are **proprietary**, with limited personal, noncommercial early-access permission under [LICENSE](LICENSE). Bundled third-party components and content have their own terms; see [third-party and content licenses](docs/legal/THIRD_PARTY_LICENSES.md). iFixit noncommercial use and some Chromium/Electron source obligations remain open for redistribution review.
